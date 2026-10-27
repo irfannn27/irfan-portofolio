@@ -17,7 +17,7 @@ const HeroSection: React.FC = () => {
       gsap.to(textRef.current, {
         duration: 3,
         text: {
-          value: "Programmer",
+          value: "Frontend & Web Developer",
           delimiter: "",
         },
       });
@@ -36,7 +36,7 @@ const HeroSection: React.FC = () => {
       ref={containerRef}
     >
       {/* Profile Avatar with glowing border */}
-      <div className="relative mb-5 group">
+      <div className="relative mb-4 group">
         <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 opacity-60 dark:opacity-80 blur-md group-hover:opacity-100 transition duration-500"></div>
         <img
           ref={imgRef}
@@ -47,8 +47,14 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* Info */}
-      <div className="space-y-3 px-2">
-        <h2 className="text-xl sm:text-2xl font-bold text-slate-800 dark:text-white tracking-tight">
+      <div className="space-y-2.5 px-2">
+        {/* Friendly greeting pill */}
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-semibold tracking-wide mb-1">
+          <span className="animate-wave inline-block origin-bottom-right">👋</span>
+          <span>Hi, I'm</span>
+        </div>
+
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
           Irfan Putra Pratama
         </h2>
 
