@@ -13,11 +13,11 @@ export default function Homepage() {
 
       <Navbar/>
 
-      <main className="relative z-0 flex-1 flex items-center justify-center w-full px-4 py-8">
+      <main className="relative z-0 flex-1 flex items-center justify-center w-full px-4 pt-14 pb-4 sm:py-8">
         <HeroSection/>
       </main>
 
-      <footer className="hidden sm:block relative z-10 text-center py-4 text-xs text-slate-400 dark:text-slate-600">
+      <footer className="relative z-10 text-center py-3 text-[11px] sm:text-xs text-slate-400 dark:text-slate-500">
         © {new Date().getFullYear()} Irfan Putra Pratama • All Rights Reserved
       </footer>
     </div>

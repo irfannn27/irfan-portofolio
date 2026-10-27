@@ -32,7 +32,7 @@ const HeroSection: React.FC = () => {
 
   return (
     <div
-      className="w-full flex flex-col justify-center items-center text-center max-w-2xl mx-auto pt-16 sm:pt-12"
+      className="w-full flex flex-col justify-center items-center text-center max-w-2xl mx-auto pt-4 sm:pt-12"
       ref={containerRef}
     >
       {/* Profile Avatar with glowing border */}
