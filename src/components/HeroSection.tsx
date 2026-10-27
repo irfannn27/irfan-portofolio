@@ -60,7 +60,7 @@ const HeroSection: React.FC = () => {
         </div>
 
         <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base max-w-md mx-auto leading-relaxed">
-          I am an informatics engineering student passionate about crafting clean, modern, and high-performance web applications.
+          Passionate Software Developer crafting modern, high-performance web applications with seamless user experiences.
         </p>
 
         {/* CTA Buttons */}
