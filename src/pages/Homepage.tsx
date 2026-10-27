@@ -17,8 +17,8 @@ export default function Homepage() {
         <HeroSection/>
       </main>
 
-      <footer className="relative z-10 text-center py-3 text-[11px] sm:text-xs text-slate-400 dark:text-slate-500 tracking-wider">
-        © {new Date().getFullYear()} fann
+      <footer className="relative z-10 text-center py-3 text-[11px] sm:text-xs text-slate-400 dark:text-slate-500">
+        © {new Date().getFullYear()} fann • All Rights Reserved
       </footer>
     </div>
   );
