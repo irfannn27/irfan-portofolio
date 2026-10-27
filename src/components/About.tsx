@@ -1,49 +1,49 @@
 import React from "react";
 import { HiCode, HiOutlineGlobeAlt, HiOutlineServer, HiOutlineSparkles } from "react-icons/hi";
 import { FaMapMarkerAlt, FaGraduationCap, FaLaptopCode, FaRocket } from "react-icons/fa";
+import { useLanguage } from "../context/LanguageContext";
 
 const About: React.FC = () => {
+  const { t } = useLanguage();
+
   const highlights = [
     {
       icon: <FaMapMarkerAlt className="text-rose-500 text-lg" />,
-      label: "Location",
-      value: "Sekayu, Palembang",
+      label: t("about.loc_label"),
+      value: t("about.loc_val"),
     },
     {
       icon: <FaGraduationCap className="text-blue-500 text-lg" />,
-      label: "Education",
-      value: "Politeknik Sekayu (TI)",
+      label: t("about.edu_label"),
+      value: t("about.edu_val"),
     },
     {
       icon: <FaLaptopCode className="text-indigo-500 text-lg" />,
-      label: "Focus",
-      value: "Frontend & Web Dev",
+      label: t("about.focus_label"),
+      value: t("about.focus_val"),
     },
     {
       icon: <FaRocket className="text-amber-500 text-lg" />,
-      label: "Core Stack",
-      value: "React, Next.js, TS",
+      label: t("about.stack_label"),
+      value: t("about.stack_val"),
     },
   ];
 
   const services = [
     {
       icon: <HiOutlineGlobeAlt className="text-2xl text-blue-500" />,
-      title: "Web Development",
-      description:
-        "Building fast, modern, and mobile-friendly websites with clean code architecture and optimal performance.",
+      title: t("services.s1_title"),
+      description: t("services.s1_desc"),
     },
     {
       icon: <HiOutlineSparkles className="text-2xl text-purple-500" />,
-      title: "UI/UX & Interactive Design",
-      description:
-        "Crafting responsive and interactive user interfaces with Tailwind CSS and smooth micro-animations.",
+      title: t("services.s2_title"),
+      description: t("services.s2_desc"),
     },
     {
       icon: <HiOutlineServer className="text-2xl text-emerald-500" />,
-      title: "Backend & API Integration",
-      description:
-        "Developing REST APIs, managing database workflows (MongoDB/MySQL), and deploying with Docker on VPS.",
+      title: t("services.s3_title"),
+      description: t("services.s3_desc"),
     },
   ];
 
@@ -53,23 +53,17 @@ const About: React.FC = () => {
       <div>
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-semibold mb-3">
           <HiCode className="text-sm" />
-          <span>Biography & Passion</span>
+          <span>{t("about.badge")}</span>
         </div>
 
         <h1 className="font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white flex items-center gap-2 tracking-tight">
-          🚀 About Me
+          {t("about.title")}
         </h1>
 
         <div className="text-slate-600 dark:text-slate-300 space-y-3.5 text-sm sm:text-base leading-relaxed mt-4">
-          <p>
-            Hello! I am <span className="font-semibold text-slate-900 dark:text-white">Irfan Putra Pratama</span>, a passionate Frontend & Web Developer based in Sekayu, Palembang (South Sumatra). I specialize in designing and engineering modern, accessible, and high-performance digital experiences.
-          </p>
-          <p>
-            As an active student majoring in Informatics Engineering at Politeknik Sekayu, I continuously bridge academic foundations with modern industry-standard technologies—primarily focusing on the React ecosystem, Next.js, TypeScript, and Tailwind CSS.
-          </p>
-          <p>
-            Beyond frontend aesthetics, I am also well-versed in backend development, API integration, payment gateway implementations, and deploying scalable solutions using Docker on VPS.
-          </p>
+          <p>{t("about.p1")}</p>
+          <p>{t("about.p2")}</p>
+          <p>{t("about.p3")}</p>
         </div>
       </div>
 
@@ -98,7 +92,7 @@ const About: React.FC = () => {
       {/* 3. What I Do / Services Cards */}
       <div className="pt-6 sm:pt-8">
         <h2 className="font-bold text-xl sm:text-2xl text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-          ⚡ What I Do
+          {t("services.title")}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {services.map((service, index) => (
@@ -126,6 +120,7 @@ const About: React.FC = () => {
 };
 
 export default About;
+
 
 
 

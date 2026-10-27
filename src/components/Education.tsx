@@ -1,31 +1,34 @@
 import { FaGraduationCap, FaUniversity } from "react-icons/fa";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Education() {
+  const { t } = useLanguage();
+
   const educationList = [
     {
       institution: "Politeknik Sekayu",
-      major: "Teknik Informatika",
-      period: "Agustus 2024 - Sekarang",
-      status: "Currently Studying",
+      major: t("edu.poltek_major"),
+      period: t("edu.poltek_period"),
+      status: t("edu.poltek_status"),
       badgeColor: "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/30",
       icon: <FaUniversity className="text-xl text-emerald-500" />,
-      description: "Fokus pada rekayasa perangkat lunak, pengembangan web modern, dan sistem basis data.",
+      description: t("edu.poltek_desc"),
     },
     {
       institution: "SMK Negeri 1 Sekayu",
-      major: "Otomatisasi Tata Kelola Perkantoran",
-      period: "2021 - 2024",
-      status: "Graduated",
+      major: t("edu.smk_major"),
+      period: t("edu.smk_period"),
+      status: t("edu.smk_status"),
       badgeColor: "bg-blue-500/15 text-blue-600 dark:text-blue-400 border-blue-500/30",
       icon: <FaGraduationCap className="text-xl text-blue-500" />,
-      description: "Mempelajari administrasi digital, komunikasi bisnis, kedisiplinan, dan efisiensi kerja.",
+      description: t("edu.smk_desc"),
     },
   ];
 
   return (
     <div className="section section-2 pt-8 sm:pt-10">
       <h1 className="font-bold text-2xl sm:text-3xl text-slate-900 dark:text-white flex items-center gap-2">
-        🎓 Education & Studies
+        {t("edu.title")}
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mt-2">
         {educationList.map((item, index) => (
@@ -59,7 +62,7 @@ export default function Education() {
               </p>
             </div>
             <div className="pt-2 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
-              <span>Periode</span>
+              <span>{t("edu.period_label")}</span>
               <span className="font-medium text-slate-700 dark:text-slate-300">{item.period}</span>
             </div>
           </div>
@@ -68,4 +71,5 @@ export default function Education() {
     </div>
   );
 }
+
 

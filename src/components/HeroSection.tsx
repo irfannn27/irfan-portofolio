@@ -5,19 +5,22 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 
+import { useLanguage } from "../context/LanguageContext";
+
 gsap.registerPlugin(TextPlugin);
 
 const HeroSection: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
+  const { t, language } = useLanguage();
 
   useEffect(() => {
     if (textRef.current && imgRef.current) {
       gsap.to(textRef.current, {
-        duration: 3,
+        duration: 2.5,
         text: {
-          value: "Frontend & Web Developer",
+          value: t("hero.role"),
           delimiter: "",
         },
       });
@@ -28,7 +31,7 @@ const HeroSection: React.FC = () => {
         ease: "power1.inOut",
       });
     }
-  }, []);
+  }, [language, t]);
 
   return (
     <div
@@ -59,7 +62,7 @@ const HeroSection: React.FC = () => {
         {/* Friendly greeting pill */}
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-semibold tracking-wide mb-1">
           <span className="animate-wave inline-block origin-bottom-right">👋</span>
-          <span>Hi, I'm</span>
+          <span>{t("hero.greeting")}</span>
         </div>
 
         <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
@@ -74,7 +77,7 @@ const HeroSection: React.FC = () => {
         </div>
 
         <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base max-w-md mx-auto leading-relaxed">
-          Passionate Software Developer crafting modern, high-performance web applications with seamless user experiences.
+          {t("hero.bio")}
         </p>
 
         {/* CTA Buttons */}
@@ -83,13 +86,13 @@ const HeroSection: React.FC = () => {
             to="/project"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm shadow-md shadow-blue-500/20 active:scale-95 transition-all duration-200"
           >
-            Explore Projects <HiArrowRight className="text-base" />
+            {t("hero.explore")} <HiArrowRight className="text-base" />
           </Link>
           <Link
             to="/contact"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-800 dark:text-white font-medium text-sm border border-slate-200 dark:border-slate-700 shadow-sm active:scale-95 transition-all duration-200"
           >
-            Contact Me
+            {t("hero.contact")}
           </Link>
         </div>
 

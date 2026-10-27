@@ -1,10 +1,13 @@
+import { useLanguage } from "../context/LanguageContext";
+
 export default function Skills(){
+  const { t } = useLanguage();
   const logos: string[] = ['html-5', 'css', 'js', 'bootstrap', 'tailwindcss', 'react', 'nextjs', 'node', 'typescript', 'express', 'mongo', 'python', 'php', 'laravel', 'mysql', 'figma', 'postman']
   
   return(
     <div className="section section-2 pt-8 sm:pt-10 pb-16">
       <h1 className="font-bold text-2xl sm:text-3xl text-slate-900 dark:text-white flex items-center gap-2">
-        💻 Tech & Tools
+        {t("skills.title")}
       </h1>
       <div className="flex flex-wrap gap-3 sm:gap-4 justify-center sm:justify-start mt-2">
         {

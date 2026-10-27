@@ -2,7 +2,7 @@ import CardProject from "./CardProject";
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import { useLanguage } from "../context/LanguageContext";
 
 interface Project {
   title: string;
@@ -14,7 +14,7 @@ interface Project {
 gsap.registerPlugin(ScrollTrigger);
 
 const Projects: React.FC = () => {
-
+  const { t } = useLanguage();
   const cardRefs = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
@@ -44,7 +44,7 @@ const Projects: React.FC = () => {
   const projects: Project[] = [
     {
       title: "Klinik Smartphone",
-      description: "Klinik Smartphone is an interactive landing page designed to introduce smartphone repair services to potential customers, complete with repair categories, customer testimonials, and quick consultation contacts.",
+      description: t("projects.klinik_desc"),
       image: "kliniksmarphone.png",
       tech: [
         "https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white",
@@ -54,7 +54,7 @@ const Projects: React.FC = () => {
     },
     {
       title: "Personal Finance - SaldaQ",
-      description: "SaldaQ is a personal finance management web app designed to easily track expenses, income, monitor wallet balances, and categorize transactions with a clean intuitive dashboard.",
+      description: t("projects.saldaq_desc"),
       image: "saldaq.png",
       tech: [
         "https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB",
@@ -67,7 +67,7 @@ const Projects: React.FC = () => {
     },
     {
       title: "Duriat Food",
-      description: "Duriat Food is a dedicated catering website that showcases signature catering packages, including Tumpeng Nasi Kuning and Nasi Box, with menu details and fast customer ordering.",
+      description: t("projects.duriat_desc"),
       image: "duriatfood.png",
       tech: [
         "https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB",
@@ -77,7 +77,7 @@ const Projects: React.FC = () => {
     },
     {
       title: "FannMovie",
-      description: "FannMovie is a responsive movie web application featuring curated movie catalogs across Popular, Top Rated, and Upcoming categories with ratings, release dates, and trailer details.",
+      description: t("projects.movie_desc"),
       image: "fannmovies.png",
       tech: [
         "https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB",
@@ -88,7 +88,7 @@ const Projects: React.FC = () => {
     },
     {
       title: "FannsRecipes",
-      description: "FannsRecipes is an interactive cooking companion application providing over 1,000+ step-by-step recipes, categorized cooking guides, and instant recipe search for home chefs.",
+      description: t("projects.recipes_desc"),
       image: "fannrecep.png",
       tech: [
         "https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB",
@@ -102,7 +102,7 @@ const Projects: React.FC = () => {
   return (
     <div className="section section-2 pt-24 sm:pt-28 md:pt-36 pb-20">
       <h1 className="font-bold text-2xl sm:text-3xl text-slate-900 dark:text-white mb-6 flex items-center gap-2">
-        🚀 Featured Projects
+        {t("projects.title")}
       </h1>
       <div className="flex flex-col gap-6">
         {projects.map((project, index) => (

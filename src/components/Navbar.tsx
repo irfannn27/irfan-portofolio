@@ -13,12 +13,14 @@ import {
   HiX 
 } from "react-icons/hi";
 import { useTheme } from "../context/ThemeContext";
+import { useLanguage } from "../context/LanguageContext";
 
 const Navbar: React.FC = () => {
   const location = useLocation();
   const isActive = (path: string) => location.pathname === path;
   const navbarRef = useRef<HTMLDivElement>(null);
   const { theme, toggleTheme } = useTheme();
+  const { language, toggleLanguage, t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
   // Close mobile menu whenever route changes
@@ -57,10 +59,10 @@ const Navbar: React.FC = () => {
   }, []);
 
   const navItems = [
-    { label: "Home", path: "/", icon: <HiHome className="text-xl" /> },
-    { label: "About", path: "/about", icon: <HiUser className="text-xl" /> },
-    { label: "Projects", path: "/project", icon: <HiFolder className="text-xl" /> },
-    { label: "Contact", path: "/contact", icon: <HiMail className="text-xl" /> },
+    { label: t("nav.home"), path: "/", icon: <HiHome className="text-xl" /> },
+    { label: t("nav.about"), path: "/about", icon: <HiUser className="text-xl" /> },
+    { label: t("nav.projects"), path: "/project", icon: <HiFolder className="text-xl" /> },
+    { label: t("nav.contact"), path: "/contact", icon: <HiMail className="text-xl" /> },
   ];
 
   return (
@@ -72,7 +74,7 @@ const Navbar: React.FC = () => {
         className="hidden md:flex fixed top-0 left-0 right-0 z-[99999] justify-center pointer-events-none font-poppins"
         ref={navbarRef}
       >
-        <nav className="pointer-events-auto mt-5 px-4 py-2.5 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md text-slate-800 dark:text-white flex justify-between items-center shadow-2xl w-[92%] max-w-[430px] rounded-full border border-slate-200 dark:border-slate-700/80 transition-all duration-300">
+        <nav className="pointer-events-auto mt-5 px-4 py-2.5 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md text-slate-800 dark:text-white flex justify-between items-center shadow-2xl w-[92%] max-w-[480px] rounded-full border border-slate-200 dark:border-slate-700/80 transition-all duration-300">
           <div className="flex gap-1.5 list-none font-medium text-sm items-center">
             {navItems.map((item) => (
               <Link
@@ -89,33 +91,45 @@ const Navbar: React.FC = () => {
             ))}
           </div>
 
-          {/* Theme Dual Pill Switch */}
-          <button
-            onClick={toggleTheme}
-            type="button"
-            aria-label="Toggle theme"
-            className="relative flex items-center bg-slate-200/90 dark:bg-slate-800 p-0.5 rounded-full border border-slate-300 dark:border-slate-700 shadow-inner cursor-pointer transition-colors duration-200 ml-2 select-none active:scale-95"
-            title={theme === 'dark' ? "Mode Gelap aktif (klik untuk Terang)" : "Mode Terang aktif (klik untuk Gelap)"}
-          >
-            <div
-              className={`flex items-center justify-center w-7 h-6 rounded-full text-xs transition-all duration-300 ${
-                theme === 'light'
-                  ? "bg-amber-400 text-slate-900 shadow-md font-bold scale-105"
-                  : "text-slate-400 hover:text-slate-600 dark:text-slate-500"
-              }`}
+          <div className="flex items-center gap-1.5">
+            {/* Language Switcher Pill */}
+            <button
+              onClick={toggleLanguage}
+              type="button"
+              className="px-2.5 py-1 text-xs font-bold rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 hover:border-blue-500 transition-all flex items-center gap-1 active:scale-95"
+              title="Ganti Bahasa / Switch Language"
             >
-              <FaSun className="text-xs" />
-            </div>
-            <div
-              className={`flex items-center justify-center w-7 h-6 rounded-full text-xs transition-all duration-300 ${
-                theme === 'dark'
-                  ? "bg-indigo-600 text-white shadow-md font-bold scale-105"
-                  : "text-slate-400 hover:text-slate-600 dark:text-slate-500"
-              }`}
+              <span>{language === "en" ? "🇬🇧 EN" : "🇮🇩 ID"}</span>
+            </button>
+
+            {/* Theme Dual Pill Switch */}
+            <button
+              onClick={toggleTheme}
+              type="button"
+              aria-label="Toggle theme"
+              className="relative flex items-center bg-slate-200/90 dark:bg-slate-800 p-0.5 rounded-full border border-slate-300 dark:border-slate-700 shadow-inner cursor-pointer transition-colors duration-200 select-none active:scale-95"
+              title={theme === 'dark' ? "Mode Gelap aktif (klik untuk Terang)" : "Mode Terang aktif (klik untuk Gelap)"}
             >
-              <FaMoon className="text-xs" />
-            </div>
-          </button>
+              <div
+                className={`flex items-center justify-center w-7 h-6 rounded-full text-xs transition-all duration-300 ${
+                  theme === 'light'
+                    ? "bg-amber-400 text-slate-900 shadow-md font-bold scale-105"
+                    : "text-slate-400 hover:text-slate-600 dark:text-slate-500"
+                }`}
+              >
+                <FaSun className="text-xs" />
+              </div>
+              <div
+                className={`flex items-center justify-center w-7 h-6 rounded-full text-xs transition-all duration-300 ${
+                  theme === 'dark'
+                    ? "bg-indigo-600 text-white shadow-md font-bold scale-105"
+                    : "text-slate-400 hover:text-slate-600 dark:text-slate-500"
+                }`}
+              >
+                <FaMoon className="text-xs" />
+              </div>
+            </button>
+          </div>
         </nav>
       </header>
 
@@ -136,6 +150,16 @@ const Navbar: React.FC = () => {
         </Link>
 
         <div className="flex items-center gap-2">
+          {/* Quick Language switch on mobile top bar */}
+          <button
+            onClick={toggleLanguage}
+            type="button"
+            className="px-2 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800/90 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 text-xs font-bold transition-colors"
+            title="Switch Language"
+          >
+            {language === "en" ? "EN" : "ID"}
+          </button>
+
           {/* Quick theme toggle */}
           <button
             onClick={toggleTheme}
@@ -203,15 +227,36 @@ const Navbar: React.FC = () => {
               @irfannn27 • @skawnfaa
             </p>
 
-            {/* Toggles Row (Dual Pills: Status/Lang + Theme) */}
-            <div className="flex items-center gap-3 mt-4 mb-6">
-              {/* Status pill */}
-              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                Open for Work & Projects
-              </div>
+            {/* Toggles Row (Dual Pills: Language + Theme) */}
+            <div className="flex items-center gap-2.5 mt-4 mb-6">
+              {/* Language Switcher Pill */}
+              <button
+                onClick={toggleLanguage}
+                type="button"
+                className="flex items-center bg-slate-200 dark:bg-slate-800/90 p-1 rounded-full border border-slate-300 dark:border-slate-700 shadow-inner cursor-pointer"
+                title="Switch Language"
+              >
+                <div
+                  className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-xs transition-all duration-300 ${
+                    language === "id"
+                      ? "bg-rose-600 text-white font-bold shadow-sm"
+                      : "text-slate-500 hover:text-slate-200"
+                  }`}
+                >
+                  <span className="text-[10px]">🇮🇩 ID</span>
+                </div>
+                <div
+                  className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-xs transition-all duration-300 ${
+                    language === "en"
+                      ? "bg-blue-600 text-white font-bold shadow-sm"
+                      : "text-slate-500 hover:text-slate-200"
+                  }`}
+                >
+                  <span className="text-[10px]">🇬🇧 EN</span>
+                </div>
+              </button>
 
-              {/* Theme Switcher Pill (Matching screenshot with Cloud/Sun & Cloud/Moon) */}
+              {/* Theme Switcher Pill */}
               <button
                 onClick={toggleTheme}
                 type="button"
@@ -274,7 +319,7 @@ const Navbar: React.FC = () => {
                 className="w-full flex items-center justify-center gap-2 px-4 py-3.5 rounded-2xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border-2 border-emerald-500/50 font-bold text-sm shadow-sm transition-all active:scale-95"
               >
                 <FaComments className="text-lg text-emerald-500" />
-                <span>Let's Talk / Hire Me</span>
+                <span>{t("nav.lets_talk")}</span>
               </Link>
             </div>
 
