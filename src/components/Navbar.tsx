@@ -208,7 +208,7 @@ const Navbar: React.FC = () => {
               {/* Status pill */}
               <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                Available for hire
+                Open for Work & Projects
               </div>
 
               {/* Theme Switcher Pill (Matching screenshot with Cloud/Sun & Cloud/Moon) */}
