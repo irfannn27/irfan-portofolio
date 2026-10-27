@@ -313,10 +313,7 @@ const Navbar: React.FC = () => {
           {/* Copyright Footer */}
           <div className="text-center pt-4 pb-2 border-t border-slate-200 dark:border-slate-800/80">
             <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">
-              COPYRIGHT © {new Date().getFullYear()}
-            </p>
-            <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-              Irfan Putra Pratama • All rights reserved.
+              COPYRIGHT © {new Date().getFullYear()} FANN
             </p>
           </div>
         </div>
