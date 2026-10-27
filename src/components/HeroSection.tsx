@@ -17,7 +17,7 @@ const HeroSection: React.FC = () => {
       gsap.to(textRef.current, {
         duration: 3,
         text: {
-          value: "Full Stack Developer",
+          value: "Programmer",
           delimiter: "",
         },
       });
