@@ -1,5 +1,5 @@
 import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
-import { HiArrowRight } from "react-icons/hi";
+import { HiArrowRight, HiCode } from "react-icons/hi";
 import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
@@ -36,7 +36,7 @@ const HeroSection: React.FC = () => {
       ref={containerRef}
     >
       {/* Profile Avatar with glowing border */}
-      <div className="relative mb-4 group">
+      <div className="relative mb-4 group inline-block">
         <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 opacity-60 dark:opacity-80 blur-md group-hover:opacity-100 transition duration-500"></div>
         <img
           ref={imgRef}
@@ -44,6 +44,14 @@ const HeroSection: React.FC = () => {
           alt="Irfan Putra Pratama"
           className="relative w-[130px] h-[130px] sm:w-[160px] sm:h-[160px] object-cover rounded-full border-2 border-white dark:border-slate-800 shadow-2xl"
         />
+
+        {/* Floating Developer </> Badge */}
+        <div
+          className="absolute bottom-1 right-1 sm:bottom-2 sm:right-2 z-10 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-slate-900/90 text-blue-400 border-2 border-white dark:border-slate-800 shadow-lg backdrop-blur-sm transition-transform duration-300 hover:scale-110"
+          title="Developer • Code Artisan"
+        >
+          <HiCode className="text-base sm:text-lg" />
+        </div>
       </div>
 
       {/* Info */}
