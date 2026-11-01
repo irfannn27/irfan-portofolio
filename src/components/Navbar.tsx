@@ -3,14 +3,14 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { FaSun, FaMoon, FaComments, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdVerified } from "react-icons/md";
-import { 
-  HiHome, 
-  HiUser, 
-  HiFolder, 
-  HiMail, 
-  HiArrowRight, 
-  HiOutlineMenuAlt3, 
-  HiX 
+import {
+  HiHome,
+  HiUser,
+  HiFolder,
+  HiMail,
+  HiArrowRight,
+  HiOutlineMenuAlt3,
+  HiX
 } from "react-icons/hi";
 import { useTheme } from "../context/ThemeContext";
 import { useLanguage } from "../context/LanguageContext";
@@ -80,11 +80,10 @@ const Navbar: React.FC = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`px-3 py-1.5 rounded-full transition-all duration-200 cursor-pointer ${
-                  isActive(item.path)
+                className={`px-3 py-1.5 rounded-full transition-all duration-200 cursor-pointer ${isActive(item.path)
                     ? "bg-blue-600 text-white font-semibold shadow-md shadow-blue-500/25"
                     : "text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60"
-                }`}
+                  }`}
               >
                 {item.label}
               </Link>
@@ -111,20 +110,18 @@ const Navbar: React.FC = () => {
               title={theme === 'dark' ? "Mode Gelap aktif (klik untuk Terang)" : "Mode Terang aktif (klik untuk Gelap)"}
             >
               <div
-                className={`flex items-center justify-center w-7 h-6 rounded-full text-xs transition-all duration-300 ${
-                  theme === 'light'
+                className={`flex items-center justify-center w-7 h-6 rounded-full text-xs transition-all duration-300 ${theme === 'light'
                     ? "bg-amber-400 text-slate-900 shadow-md font-bold scale-105"
                     : "text-slate-400 hover:text-slate-600 dark:text-slate-500"
-                }`}
+                  }`}
               >
                 <FaSun className="text-xs" />
               </div>
               <div
-                className={`flex items-center justify-center w-7 h-6 rounded-full text-xs transition-all duration-300 ${
-                  theme === 'dark'
+                className={`flex items-center justify-center w-7 h-6 rounded-full text-xs transition-all duration-300 ${theme === 'dark'
                     ? "bg-indigo-600 text-white shadow-md font-bold scale-105"
                     : "text-slate-400 hover:text-slate-600 dark:text-slate-500"
-                }`}
+                  }`}
               >
                 <FaMoon className="text-xs" />
               </div>
@@ -237,20 +234,18 @@ const Navbar: React.FC = () => {
                 title="Switch Language"
               >
                 <div
-                  className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-xs transition-all duration-300 ${
-                    language === "id"
+                  className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-xs transition-all duration-300 ${language === "id"
                       ? "bg-rose-600 text-white font-bold shadow-sm"
                       : "text-slate-500 hover:text-slate-200"
-                  }`}
+                    }`}
                 >
                   <span className="text-[10px]">🇮🇩 ID</span>
                 </div>
                 <div
-                  className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-xs transition-all duration-300 ${
-                    language === "en"
+                  className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-xs transition-all duration-300 ${language === "en"
                       ? "bg-blue-600 text-white font-bold shadow-sm"
                       : "text-slate-500 hover:text-slate-200"
-                  }`}
+                    }`}
                 >
                   <span className="text-[10px]">🇬🇧 EN</span>
                 </div>
@@ -264,21 +259,19 @@ const Navbar: React.FC = () => {
                 title="Ganti Mode Terang / Gelap"
               >
                 <div
-                  className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-xs transition-all duration-300 ${
-                    theme === 'light'
+                  className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-xs transition-all duration-300 ${theme === 'light'
                       ? "bg-amber-400 text-slate-950 font-bold shadow-sm"
                       : "text-slate-400 hover:text-slate-200"
-                  }`}
+                    }`}
                 >
                   <FaSun className="text-xs" />
                   <span className="text-[10px]">Light</span>
                 </div>
                 <div
-                  className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-xs transition-all duration-300 ${
-                    theme === 'dark'
+                  className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-xs transition-all duration-300 ${theme === 'dark'
                       ? "bg-indigo-600 text-white font-bold shadow-sm"
                       : "text-slate-500 hover:text-slate-300"
-                  }`}
+                    }`}
                 >
                   <FaMoon className="text-xs" />
                   <span className="text-[10px]">Dark</span>
@@ -294,11 +287,10 @@ const Navbar: React.FC = () => {
                   <Link
                     key={item.path}
                     to={item.path}
-                    className={`w-full flex items-center justify-between px-4 py-3.5 rounded-2xl transition-all duration-200 border ${
-                      active
+                    className={`w-full flex items-center justify-between px-4 py-3.5 rounded-2xl transition-all duration-200 border ${active
                         ? "bg-blue-600 text-white border-blue-500 shadow-lg shadow-blue-500/25 font-semibold"
                         : "bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-850 shadow-sm"
-                    }`}
+                      }`}
                   >
                     <div className="flex items-center gap-3">
                       <span className={active ? "text-white" : "text-blue-500"}>

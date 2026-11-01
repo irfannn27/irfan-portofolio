@@ -9,6 +9,7 @@ interface Project {
   description: string;
   image: string;
   tech: Array<string>;
+  link?: string;
 }
 
 gsap.registerPlugin(ScrollTrigger);
@@ -42,6 +43,18 @@ const Projects: React.FC = () => {
   }, []);
 
   const projects: Project[] = [
+    {
+      title: "FarahShop",
+      description: t("projects.farahshop_desc"),
+      image: "farahshop.png",
+      link: "https://farahhshop.netlify.app/",
+      tech: [
+        "https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB",
+        "https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black",
+        "https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white",
+        "https://img.shields.io/badge/Netlify-00C7B7?style=flat-square&logo=netlify&logoColor=white",
+      ],
+    },
     {
       title: "Klinik Smartphone",
       description: t("projects.klinik_desc"),
@@ -112,6 +125,7 @@ const Projects: React.FC = () => {
               description={project.description}
               image={project.image}
               tech={project.tech}
+              link={project.link}
             />
           </div>
         ))}

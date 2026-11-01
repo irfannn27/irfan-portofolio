@@ -78,6 +78,8 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Projects
     "projects.title": "🚀 Featured Projects",
+    "projects.farahshop_desc":
+      "FarahShop is an interactive e-commerce and catalog web platform offering curated products, culinary delights, photo printing, and personal shopper (jastip) services with a modern responsive UI.",
     "projects.saldaq_desc":
       "SaldaQ is a personal finance management web app designed to easily track expenses, income, monitor wallet balances, and categorize transactions with a clean intuitive dashboard.",
     "projects.klinik_desc":
@@ -172,6 +174,8 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Projects
     "projects.title": "🚀 Proyek Unggulan",
+    "projects.farahshop_desc":
+      "FarahShop adalah platform katalog & belanja online serba ada untuk pemesanan berbagai produk, aneka kuliner/makanan, cetak foto, hingga layanan jasa titip (jastip) dengan tampilan modern dan responsif.",
     "projects.saldaq_desc":
       "SaldaQ adalah aplikasi web manajemen keuangan pribadi untuk mencatat pengeluaran, pemasukan, memantau saldo dompet, dan mengkategorikan transaksi dengan dashboard intuitif.",
     "projects.klinik_desc":
