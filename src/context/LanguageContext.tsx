@@ -47,6 +47,25 @@ const translations: Record<Language, Record<string, string>> = {
     "about.stack_label": "Core Stack",
     "about.stack_val": "React, Next.js, TS",
 
+    // Stacked Cards / Philosophy
+    "stack.badge": "Interactive Stack",
+    "stack.title": "✨ Core Engineering Pillars",
+    "stack.subtitle": "Click or drag the cards to explore my development approach & standards.",
+    "stack.hint": "👆 Click or swipe card to cycle deck",
+    "stack.shuffle_btn": "Next Pillar",
+    "stack.c1_badge": "Architecture & Clean Code",
+    "stack.c1_title": "Modern, High-Performance Web Architecture",
+    "stack.c1_desc": "Engineering ultra-responsive web applications with the React, Next.js, and TypeScript ecosystem, prioritizing modularity, reusability, and maintainability.",
+    "stack.c2_badge": "Interactive UI/UX",
+    "stack.c2_title": "Fluid Physics & Tactile Micro-Interactions",
+    "stack.c2_desc": "Creating rich, animated user experiences powered by Framer Motion, spring physics, layout transitions, and bespoke aesthetics that reject generic AI templates.",
+    "stack.c3_badge": "Backend & Cloud",
+    "stack.c3_title": "Scalable REST APIs & Robust Databases",
+    "stack.c3_desc": "Developing rock-solid backend services using Node.js and Express, managing database workflows in MongoDB/MySQL, and deploying production containers via Docker on VPS.",
+    "stack.c4_badge": "Real Impact",
+    "stack.c4_title": "Proven Public & Commercial Deployments",
+    "stack.c4_desc": "Trusted to engineer official government web portals (.go.id for Setda Kab. Muba), multi-service e-commerce, and live digital products serving real communities.",
+
     // What I Do
     "services.title": "⚡ What I Do",
     "services.s1_title": "Web Development",
@@ -151,6 +170,25 @@ const translations: Record<Language, Record<string, string>> = {
     "about.focus_val": "Frontend & Web Dev",
     "about.stack_label": "Keahlian Inti",
     "about.stack_val": "React, Next.js, TS",
+
+    // Stacked Cards / Philosophy
+    "stack.badge": "Interaktif Tumpang Tindih",
+    "stack.title": "✨ Pilar Keahlian & Standar Kerja",
+    "stack.subtitle": "Klik atau geser kartu tumpang tindih ini untuk melihat dedikasi & keahlian saya.",
+    "stack.hint": "👆 Klik atau geser kartu untuk ganti tumpukan",
+    "stack.shuffle_btn": "Kartu Berikutnya",
+    "stack.c1_badge": "Arsitektur & Kode Bersih",
+    "stack.c1_title": "Arsitektur Web Modern Berkinerja Tinggi",
+    "stack.c1_desc": "Membangun aplikasi web ultra-responsif menggunakan ekosistem React, Next.js, dan TypeScript dengan standar kode modular, terstruktur, dan mudah dikembangkan.",
+    "stack.c2_badge": "Desain UI/UX Interaktif",
+    "stack.c2_title": "Fisika Pegas & Animasi Mikro Framer Motion",
+    "stack.c2_desc": "Menghadirkan pengalaman visual interaktif dengan physics-based animations (Framer Motion), layout transitions halus, dan sentuhan artisanal tanpa kesan AI template.",
+    "stack.c3_badge": "Backend & Integrasi",
+    "stack.c3_title": "REST API Tangguh & Manajemen Basis Data",
+    "stack.c3_desc": "Merancang backend terpercaya dengan Node.js, Express, manajemen database MongoDB/MySQL, hingga deployment sistem menggunakan Docker di VPS.",
+    "stack.c4_badge": "Dampak Nyata",
+    "stack.c4_title": "Implementasi Resmi & Teruji di Lapangan",
+    "stack.c4_desc": "Berpengalaman mengembangkan website resmi instansi pemerintahan (.go.id untuk Setda Kab. Muba), e-commerce multi-layanan, dan aplikasi yang aktif digunakan.",
 
     // What I Do
     "services.title": "⚡ Layanan & Keahlian",
