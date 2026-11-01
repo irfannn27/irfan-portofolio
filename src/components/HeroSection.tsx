@@ -47,6 +47,10 @@ const HeroSection = () => {
           ref={imgRef}
           src="./img/myfoto.jpg"
           alt="Irfan Putra Pratama"
+          width="160"
+          height="160"
+          fetchPriority="high"
+          decoding="async"
           className="relative w-[130px] h-[130px] sm:w-[160px] sm:h-[160px] object-cover rounded-full border-2 border-white dark:border-slate-800 shadow-2xl transition-transform duration-300 group-hover:scale-105"
         />
 
