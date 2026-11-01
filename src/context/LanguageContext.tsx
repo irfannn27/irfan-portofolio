@@ -67,14 +67,13 @@ const translations: Record<Language, Record<string, string>> = {
     "edu.poltek_major": "Informatics Engineering",
     "edu.poltek_period": "August 2024 - Present",
     "edu.poltek_status": "Currently Studying",
+    "edu.poltek_gpa": "GPA 3.90 / 4.00",
     "edu.poltek_desc":
-      "Focused on software engineering, modern web development, and database architecture.",
-    "edu.smk_major": "Office Automation & Governance",
-    "edu.smk_period": "2021 - 2024",
-    "edu.smk_status": "Graduated",
-    "edu.smk_desc":
-      "Studied digital administration, business communications, discipline, and workflow efficiency.",
+      "Pursuing a degree in Informatics Engineering with an outstanding academic record (GPA 3.90). Focused on modern software engineering, web application architecture, and database systems.",
     "edu.period_label": "Period",
+    "edu.gpa_label": "Academic Performance",
+    "edu.focus_label": "Focus Area",
+    "edu.focus_val": "Software & Web Engineering",
 
     // Skills
     "skills.title": "💻 Tech & Tools",
@@ -175,14 +174,13 @@ const translations: Record<Language, Record<string, string>> = {
     "edu.poltek_major": "Teknik Informatika",
     "edu.poltek_period": "Agustus 2024 - Sekarang",
     "edu.poltek_status": "Sedang Menempuh Studi",
+    "edu.poltek_gpa": "IPK 3.90 / 4.00",
     "edu.poltek_desc":
-      "Fokus pada rekayasa perangkat lunak, pengembangan web modern, dan sistem basis data.",
-    "edu.smk_major": "Otomatisasi Tata Kelola Perkantoran",
-    "edu.smk_period": "2021 - 2024",
-    "edu.smk_status": "Lulus",
-    "edu.smk_desc":
-      "Mempelajari administrasi digital, komunikasi bisnis, kedisiplinan kerja, dan efisiensi alur kerja.",
+      "Menempuh studi Teknik Informatika dengan prestasi akademik istimewa (IPK 3.90). Berfokus pada rekayasa perangkat lunak modern, arsitektur web, dan sistem basis data.",
     "edu.period_label": "Periode",
+    "edu.gpa_label": "Prestasi Akademik",
+    "edu.focus_label": "Fokus Studi",
+    "edu.focus_val": "Rekayasa Web & Perangkat Lunak",
 
     // Skills
     "skills.title": "💻 Teknologi & Tools",
