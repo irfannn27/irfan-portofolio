@@ -58,6 +58,7 @@ const Projects: React.FC = () => {
       title: "Klinik Smartphone",
       description: t("projects.klinik_desc"),
       image: "kliniksmarphone.png",
+      link: "https://kliniksmarphone.netlify.app/",
       tech: [
         "https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white",
         "https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white",
@@ -81,6 +82,7 @@ const Projects: React.FC = () => {
       title: "Duriat Food",
       description: t("projects.duriat_desc"),
       image: "duriatfood.png",
+      link: "https://duriatfood.netlify.app/",
       tech: [
         "https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB",
         "https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white",
@@ -91,6 +93,7 @@ const Projects: React.FC = () => {
       title: "FannMovie",
       description: t("projects.movie_desc"),
       image: "fannmovies.png",
+      link: "https://fannmoviess.netlify.app/",
       tech: [
         "https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB",
         "https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black",
@@ -102,6 +105,7 @@ const Projects: React.FC = () => {
       title: "FannsRecipes",
       description: t("projects.recipes_desc"),
       image: "fannrecep.png",
+      link: "https://fannreceipes.netlify.app/",
       tech: [
         "https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB",
         "https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black",
