@@ -139,9 +139,8 @@ const Navbar: React.FC = () => {
             alt="Irfan"
             className="w-8 h-8 rounded-full object-cover border border-blue-500"
           />
-          <span className="font-bold text-sm tracking-tight text-slate-900 dark:text-white flex items-center gap-1.5">
-            <span>Irfan Putra</span>
-            <span className="font-mono text-[10px] font-black px-1.5 py-0.5 rounded-md bg-blue-500/10 dark:bg-blue-500/20 text-blue-600 dark:text-cyan-400 border border-blue-500/30">&lt;IPP/&gt;</span>
+          <span className="font-bold text-sm tracking-tight text-slate-900 dark:text-white">
+            Irfan Putra
           </span>
         </Link>
 
