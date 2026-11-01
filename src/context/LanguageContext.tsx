@@ -49,12 +49,15 @@ const translations: Record<Language, Record<string, string>> = {
 
     // What I Do
     "services.title": "⚡ What I Do",
+    "services.s1_badge": "Frontend & Architecture",
     "services.s1_title": "Web Development",
     "services.s1_desc":
       "Building fast, modern, and mobile-friendly websites with clean code architecture and optimal performance.",
+    "services.s2_badge": "UI/UX & Motion Design",
     "services.s2_title": "UI/UX & Interactive Design",
     "services.s2_desc":
       "Crafting responsive and interactive user interfaces with Tailwind CSS and smooth micro-animations.",
+    "services.s3_badge": "Backend & Cloud Services",
     "services.s3_title": "Backend & API Integration",
     "services.s3_desc":
       "Developing REST APIs, managing database workflows (MongoDB/MySQL), and deploying with Docker on VPS.",
@@ -154,12 +157,15 @@ const translations: Record<Language, Record<string, string>> = {
 
     // What I Do
     "services.title": "⚡ Layanan & Keahlian",
+    "services.s1_badge": "Frontend & Arsitektur Web",
     "services.s1_title": "Pengembangan Web",
     "services.s1_desc":
       "Membangun website modern, cepat, dan ramah pengguna di perangkat seluler dengan kode yang bersih dan optimal.",
+    "services.s2_badge": "Desain UI/UX & Animasi",
     "services.s2_title": "Desain UI/UX & Interaktif",
     "services.s2_desc":
       "Merancang antarmuka web yang menarik, intuitif, dan responsif dengan Tailwind CSS serta animasi halus.",
+    "services.s3_badge": "Backend & Layanan Cloud",
     "services.s3_title": "Integrasi Backend & API",
     "services.s3_desc":
       "Mengembangkan REST API, mengelola alur basis data (MongoDB/MySQL), serta deployment menggunakan Docker di VPS.",

@@ -31,6 +31,8 @@ const About = () => {
 
   const services = [
     {
+      badgeKey: "services.s1_badge",
+      badgeColor: "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20",
       icon: <HiOutlineGlobeAlt className="text-2xl text-blue-500" />,
       accent: "from-blue-500 via-indigo-500 to-cyan-500",
       title: t("services.s1_title"),
@@ -38,6 +40,8 @@ const About = () => {
       highlights: ["React 18 & Next.js", "TypeScript Architecture", "Tailwind CSS", "Responsive Mobile-First"],
     },
     {
+      badgeKey: "services.s2_badge",
+      badgeColor: "bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/20",
       icon: <HiOutlineSparkles className="text-2xl text-purple-500" />,
       accent: "from-purple-500 via-pink-500 to-rose-500",
       title: t("services.s2_title"),
@@ -45,6 +49,8 @@ const About = () => {
       highlights: ["Framer Motion Physics", "Micro-Interactions", "Clean Typography", "Custom Interaction Design"],
     },
     {
+      badgeKey: "services.s3_badge",
+      badgeColor: "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20",
       icon: <HiOutlineServer className="text-2xl text-emerald-500" />,
       accent: "from-emerald-500 via-teal-500 to-cyan-500",
       title: t("services.s3_title"),
@@ -130,8 +136,8 @@ const About = () => {
                       <div className="w-12 h-12 rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center shadow-inner">
                         {service.icon}
                       </div>
-                      <span className="text-xs font-semibold px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
-                        Pillar 0{index + 1}
+                      <span className={`text-xs font-semibold px-3 py-1 rounded-full border ${service.badgeColor}`}>
+                        {t(service.badgeKey)}
                       </span>
                     </div>
 
