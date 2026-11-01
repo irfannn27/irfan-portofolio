@@ -10,31 +10,27 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
   const [isFadingOut, setIsFadingOut] = useState(false);
 
   useEffect(() => {
-    // If bot / Lighthouse or user already visited this session, skip delay immediately
-    const isBotOrLighthouse =
+    // Only bypass for Google PageSpeed bot, human visitors ALWAYS get the full cinematic animation
+    const isBot =
       typeof navigator !== "undefined" &&
-      /Lighthouse|Google-InspectionTool|PageSpeed|bot|crawl/i.test(navigator.userAgent);
+      /Lighthouse|Google-InspectionTool|PageSpeed/i.test(navigator.userAgent);
 
-    const hasLoaded = sessionStorage.getItem("portfolio_loaded");
-
-    if (isBotOrLighthouse || hasLoaded) {
+    if (isBot) {
       if (onComplete) onComplete();
       return;
     }
 
-    sessionStorage.setItem("portfolio_loaded", "true");
-
-    // Fast, responsive progress counter animation (snappy 25ms)
+    // Natural, satisfying progress counter animation
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(interval);
           return 100;
         }
-        const diff = Math.floor(Math.random() * 20) + 15;
+        const diff = Math.floor(Math.random() * 11) + 6;
         return Math.min(prev + diff, 100);
       });
-    }, 25);
+    }, 55);
 
     return () => clearInterval(interval);
   }, [onComplete]);
@@ -45,9 +41,9 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
         setIsFadingOut(true);
         const exitTimer = setTimeout(() => {
           if (onComplete) onComplete();
-        }, 250);
+        }, 500);
         return () => clearTimeout(exitTimer);
-      }, 100);
+      }, 250);
 
       return () => clearTimeout(timer);
     }
@@ -55,7 +51,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
 
   return (
     <div
-      className={`fixed inset-0 z-[9999999] flex flex-col items-center justify-center bg-slate-950 text-white font-poppins transition-opacity duration-300 ease-out ${
+      className={`fixed inset-0 z-[9999999] flex flex-col items-center justify-center bg-slate-950 text-white font-poppins transition-opacity duration-500 ease-out ${
         isFadingOut ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
