@@ -139,8 +139,9 @@ const Navbar: React.FC = () => {
             alt="Irfan"
             className="w-8 h-8 rounded-full object-cover border border-blue-500"
           />
-          <span className="font-bold text-sm tracking-tight text-slate-900 dark:text-white flex items-center gap-1">
-            Irfan Putra
+          <span className="font-bold text-sm tracking-tight text-slate-900 dark:text-white flex items-center gap-1.5">
+            <span>Irfan Putra</span>
+            <span className="font-mono text-[10px] font-black px-1.5 py-0.5 rounded-md bg-blue-500/10 dark:bg-blue-500/20 text-blue-600 dark:text-cyan-400 border border-blue-500/30">&lt;IPP/&gt;</span>
           </span>
         </Link>
 
@@ -210,10 +211,11 @@ const Navbar: React.FC = () => {
             </div>
 
             {/* Name + Verified Badge */}
-            <div className="flex items-center justify-center gap-1.5">
+            <div className="flex flex-col items-center justify-center gap-1">
               <h2 className="text-xl font-extrabold text-slate-900 dark:text-white">
                 Irfan Putra Pratama
               </h2>
+              <span className="font-mono text-xs font-black tracking-wider px-2.5 py-0.5 rounded-full bg-blue-500/10 dark:bg-blue-500/20 text-blue-600 dark:text-cyan-400 border border-blue-500/30">&lt;IPP/&gt;</span>
             </div>
 
             {/* Handle / Role */}

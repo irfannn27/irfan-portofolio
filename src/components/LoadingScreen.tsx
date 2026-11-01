@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { HiCode } from "react-icons/hi";
 
 interface LoadingScreenProps {
   onComplete?: () => void;
@@ -59,10 +58,18 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
       <div className="absolute w-72 h-72 bg-blue-600/20 rounded-full blur-3xl animate-pulse"></div>
 
       <div className="relative z-10 flex flex-col items-center gap-6">
-        {/* Animated Logo Icon */}
-        <div className="relative flex items-center justify-center w-16 h-16 rounded-2xl bg-slate-900 border border-slate-800 shadow-2xl">
-          <HiCode className="text-3xl text-blue-500 animate-pulse" />
-          <div className="absolute -inset-1 rounded-2xl bg-blue-500/20 blur-sm -z-10 animate-pulse"></div>
+        {/* Animated Branded <IPP/> Logo Emblem */}
+        <div className="relative group">
+          <div className="absolute -inset-2 rounded-2xl bg-gradient-to-r from-blue-600/40 via-cyan-500/30 to-indigo-600/40 blur-lg animate-pulse"></div>
+          <div className="relative flex items-center justify-center px-6 py-3.5 rounded-2xl bg-slate-900/90 border border-slate-700/80 shadow-2xl backdrop-blur-md">
+            <span className="font-mono font-black text-2xl sm:text-3xl tracking-wider select-none flex items-center">
+              <span className="text-cyan-400 drop-shadow-[0_0_10px_rgba(56,189,248,0.7)]">&lt;</span>
+              <span className="bg-gradient-to-r from-white via-slate-100 to-blue-200 bg-clip-text text-transparent px-1">
+                IPP
+              </span>
+              <span className="text-cyan-400 drop-shadow-[0_0_10px_rgba(56,189,248,0.7)]">/&gt;</span>
+            </span>
+          </div>
         </div>
 
         {/* Progress Bar Container */}
@@ -76,7 +83,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
 
           <div className="w-full flex justify-between items-center text-[11px] font-mono tracking-wider text-slate-400">
             <span>LOADING</span>
-            <span className="text-blue-400 font-semibold">{progress}%</span>
+            <span className="text-cyan-400 font-semibold">{progress}%</span>
           </div>
         </div>
       </div>
