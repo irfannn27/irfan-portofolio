@@ -1,4 +1,5 @@
 import { HiExternalLink } from "react-icons/hi";
+import { useLanguage } from "../context/LanguageContext";
 
 interface CardProjectProps {
   title: string;
@@ -9,6 +10,7 @@ interface CardProjectProps {
 }
 
 export default function CardProject({ title, description, image, tech, link }: CardProjectProps){
+  const { t } = useLanguage();
   const imageSrc = image.startsWith('http') || image.startsWith('/') || image.startsWith('./')
     ? image
     : image.includes('.')
@@ -35,7 +37,7 @@ export default function CardProject({ title, description, image, tech, link }: C
             className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px] rounded-xl"
           >
             <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-blue-600 hover:bg-blue-500 text-white text-xs sm:text-sm font-semibold shadow-lg shadow-blue-500/30 transform translate-y-2 group-hover/img:translate-y-0 transition-transform duration-300">
-              Live Demo <HiExternalLink className="text-base" />
+              {t("projects.visit_site")} <HiExternalLink className="text-base" />
             </span>
           </a>
         )}
@@ -50,9 +52,9 @@ export default function CardProject({ title, description, image, tech, link }: C
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 hover:underline shrink-0 pt-1"
-                title="Buka Website"
+                title={t("projects.visit_site")}
               >
-                <span>Live Demo</span>
+                <span>{t("projects.visit_site")}</span>
                 <HiExternalLink className="text-base" />
               </a>
             )}

@@ -78,6 +78,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Projects
     "projects.title": "🚀 Featured Projects",
+    "projects.visit_site": "Visit Website",
     "projects.setdamuba_desc":
       "Official web portal for Bagian Umum Sekretariat Daerah Kabupaten Musi Banyuasin, providing public administration information, organizational profiles, event galleries, and venue loan SOP services.",
     "projects.farahshop_desc":
@@ -176,6 +177,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Projects
     "projects.title": "🚀 Proyek Unggulan",
+    "projects.visit_site": "Kunjungi Web",
     "projects.setdamuba_desc":
       "Website resmi Bagian Umum Sekretariat Daerah Kabupaten Musi Banyuasin untuk menyajikan informasi profil bagian, struktur organisasi, galeri kegiatan, serta transparansi SOP peminjaman tempat.",
     "projects.farahshop_desc":
