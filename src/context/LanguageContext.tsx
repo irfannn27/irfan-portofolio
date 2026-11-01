@@ -90,7 +90,7 @@ const translations: Record<Language, Record<string, string>> = {
     "projects.setdamuba_desc":
       "Official web portal for Bagian Umum Sekretariat Daerah Kabupaten Musi Banyuasin, providing public administration information, organizational profiles, event galleries, and venue loan SOP services.",
     "projects.rrfnnn_desc":
-      "The official high-performance portfolio platform designed and engineered collaboratively by Irfan & Noemi. Featuring Scroll-Craft animations, Framer Motion & GSAP physics, bilingual localization (ID/EN), and bespoke modern developer aesthetics.",
+      "Official high-performance portfolio web platform showcasing curated digital projects, technical expertise, and engineering achievements with a modern, fast, and responsive user interface.",
     "projects.farahshop_desc":
       "FarahShop is an interactive e-commerce and catalog web platform offering curated products, culinary delights, photo printing, and personal shopper (jastip) services with a modern responsive UI.",
     "projects.saldaq_desc":
@@ -199,7 +199,7 @@ const translations: Record<Language, Record<string, string>> = {
     "projects.setdamuba_desc":
       "Website resmi Bagian Umum Sekretariat Daerah Kabupaten Musi Banyuasin untuk menyajikan informasi profil bagian, struktur organisasi, galeri kegiatan, serta transparansi SOP peminjaman tempat.",
     "projects.rrfnnn_desc":
-      "Website portofolio resmi berkinerja tinggi yang dirancang dan dikembangkan bersama secara kolaboratif oleh Irfan & Noemi. Menghadirkan animasi Scroll-Craft, transisi halus Framer Motion & GSAP, sistem dwibahasa (ID/EN), serta estetika modern yang memukau.",
+      "Platform website portofolio resmi berkinerja tinggi yang menampilkan kurasi proyek digital, keahlian teknis, dan pencapaian dengan antarmuka modern yang cepat dan responsif.",
     "projects.farahshop_desc":
       "FarahShop adalah platform katalog & belanja online serba ada untuk pemesanan berbagai produk, aneka kuliner/makanan, cetak foto, hingga layanan jasa titip (jastip) dengan tampilan modern dan responsif.",
     "projects.saldaq_desc":
