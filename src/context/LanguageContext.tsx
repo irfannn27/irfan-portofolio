@@ -83,10 +83,10 @@ const translations: Record<Language, Record<string, string>> = {
     "projects.subtitle": "A curated showcase of real-world digital solutions, official platforms, and modern web applications.",
     "projects.visit_site": "Visit Website",
     "projects.status_live": "Live",
-    "projects.filter_all": "All Projects",
+    "projects.filter_all": "All",
     "projects.filter_gov": "Government",
-    "projects.filter_commerce": "E-Commerce",
-    "projects.filter_apps": "Web Apps",
+    "projects.filter_commerce": "Commerce",
+    "projects.filter_apps": "Apps",
     "projects.setdamuba_desc":
       "Official web portal for Bagian Umum Sekretariat Daerah Kabupaten Musi Banyuasin, providing public administration information, organizational profiles, event galleries, and venue loan SOP services.",
     "projects.rrfnnn_desc":
@@ -192,10 +192,10 @@ const translations: Record<Language, Record<string, string>> = {
     "projects.subtitle": "Koleksi proyek nyata, platform resmi, dan aplikasi web modern yang telah saya rancang & kembangkan.",
     "projects.visit_site": "Kunjungi Web",
     "projects.status_live": "Live",
-    "projects.filter_all": "Semua Proyek",
-    "projects.filter_gov": "Pemerintahan",
-    "projects.filter_commerce": "E-Commerce",
-    "projects.filter_apps": "Aplikasi Web",
+    "projects.filter_all": "Semua",
+    "projects.filter_gov": "Pemerintah",
+    "projects.filter_commerce": "Commerce",
+    "projects.filter_apps": "Aplikasi",
     "projects.setdamuba_desc":
       "Website resmi Bagian Umum Sekretariat Daerah Kabupaten Musi Banyuasin untuk menyajikan informasi profil bagian, struktur organisasi, galeri kegiatan, serta transparansi SOP peminjaman tempat.",
     "projects.rrfnnn_desc":

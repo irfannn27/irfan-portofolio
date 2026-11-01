@@ -164,15 +164,15 @@ const Projects = () => {
         </p>
       </div>
 
-      {/* Interactive Filter Pills */}
-      <div className="flex flex-wrap gap-2 sm:gap-2.5 mb-8 p-1.5 bg-slate-200/50 dark:bg-slate-900/60 backdrop-blur-md rounded-2xl border border-slate-200 dark:border-slate-800/80 w-fit">
+      {/* Interactive Minimalist Filter Segment */}
+      <div className="flex items-center gap-1 sm:gap-1.5 mb-6 sm:mb-8 p-1 sm:p-1.5 bg-slate-200/60 dark:bg-slate-900/70 backdrop-blur-md rounded-2xl border border-slate-200/80 dark:border-slate-800/80 w-full sm:w-fit overflow-x-auto scrollbar-none">
         {filterTabs.map((tab) => {
           const isActive = activeTab === tab.id;
           return (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`relative px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-colors duration-200 ${isActive
+              className={`relative flex-1 sm:flex-initial px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs sm:text-sm font-semibold transition-colors duration-200 whitespace-nowrap text-center ${isActive
                   ? "text-white"
                   : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
                 }`}
@@ -180,8 +180,8 @@ const Projects = () => {
               {isActive && (
                 <motion.div
                   layoutId="activeFilterPill"
-                  className="absolute inset-0 bg-blue-600 rounded-xl shadow-md shadow-blue-500/25"
-                  transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  className="absolute inset-0 bg-blue-600 rounded-xl shadow-sm shadow-blue-500/30"
+                  transition={{ type: "spring", stiffness: 420, damping: 32 }}
                 />
               )}
               <span className="relative z-10">{tab.label}</span>
