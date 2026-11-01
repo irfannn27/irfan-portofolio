@@ -1,7 +1,6 @@
 import { HiCode, HiOutlineGlobeAlt, HiOutlineServer, HiOutlineSparkles } from "react-icons/hi";
 import { FaMapMarkerAlt, FaGraduationCap, FaLaptopCode, FaRocket } from "react-icons/fa";
 import { useLanguage } from "../context/LanguageContext";
-import StackedCards from "./StackedCards";
 
 const About = () => {
   const { t } = useLanguage();
@@ -89,11 +88,8 @@ const About = () => {
         ))}
       </div>
 
-      {/* 3. Interactive Stacked Cards Animation (Framer Motion) */}
-      <StackedCards />
-
-      {/* 4. What I Do / Services Cards */}
-      <div className="pt-8 sm:pt-10">
+      {/* 3. What I Do / Services Cards */}
+      <div className="pt-6 sm:pt-8">
         <h2 className="font-bold text-xl sm:text-2xl text-slate-900 dark:text-white mb-4 flex items-center gap-2">
           {t("services.title")}
         </h2>
