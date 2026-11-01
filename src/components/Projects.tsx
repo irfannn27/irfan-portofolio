@@ -44,6 +44,18 @@ const Projects: React.FC = () => {
 
   const projects: Project[] = [
     {
+      title: "Bagian Umum Setda Kab. Muba",
+      description: t("projects.setdamuba_desc"),
+      image: "setdamuba.png",
+      link: "https://bagianumumsetda.mubakab.go.id/",
+      tech: [
+        "https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white",
+        "https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black",
+        "https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white",
+        "https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white",
+      ],
+    },
+    {
       title: "FarahShop",
       description: t("projects.farahshop_desc"),
       image: "farahshop.png",

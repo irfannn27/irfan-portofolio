@@ -78,6 +78,8 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Projects
     "projects.title": "🚀 Featured Projects",
+    "projects.setdamuba_desc":
+      "Official web portal for Bagian Umum Sekretariat Daerah Kabupaten Musi Banyuasin, providing public administration information, organizational profiles, event galleries, and venue loan SOP services.",
     "projects.farahshop_desc":
       "FarahShop is an interactive e-commerce and catalog web platform offering curated products, culinary delights, photo printing, and personal shopper (jastip) services with a modern responsive UI.",
     "projects.saldaq_desc":
@@ -174,6 +176,8 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Projects
     "projects.title": "🚀 Proyek Unggulan",
+    "projects.setdamuba_desc":
+      "Website resmi Bagian Umum Sekretariat Daerah Kabupaten Musi Banyuasin untuk menyajikan informasi profil bagian, struktur organisasi, galeri kegiatan, serta transparansi SOP peminjaman tempat.",
     "projects.farahshop_desc":
       "FarahShop adalah platform katalog & belanja online serba ada untuk pemesanan berbagai produk, aneka kuliner/makanan, cetak foto, hingga layanan jasa titip (jastip) dengan tampilan modern dan responsif.",
     "projects.saldaq_desc":
