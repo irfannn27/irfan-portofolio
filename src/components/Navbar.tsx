@@ -2,7 +2,6 @@ import { Link, useLocation } from "react-router-dom";
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { FaSun, FaMoon, FaComments, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
-import { MdVerified } from "react-icons/md";
 import {
   HiHome,
   HiUser,
@@ -142,7 +141,6 @@ const Navbar: React.FC = () => {
           />
           <span className="font-bold text-sm tracking-tight text-slate-900 dark:text-white flex items-center gap-1">
             Irfan Putra
-            <MdVerified className="text-blue-500 text-base" />
           </span>
         </Link>
 
@@ -216,7 +214,6 @@ const Navbar: React.FC = () => {
               <h2 className="text-xl font-extrabold text-slate-900 dark:text-white">
                 Irfan Putra Pratama
               </h2>
-              <MdVerified className="text-blue-500 text-xl" />
             </div>
 
             {/* Handle / Role */}
