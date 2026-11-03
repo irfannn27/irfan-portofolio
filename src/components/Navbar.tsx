@@ -2,7 +2,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import { FaSun, FaMoon, FaComments, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaComments, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
+import { LuMoon, LuSun } from "react-icons/lu";
 import {
   HiHome,
   HiUser,
@@ -111,31 +112,21 @@ const Navbar: React.FC = () => {
               <span>{language === "en" ? "EN" : "ID"}</span>
             </button>
 
-            {/* Theme Dual Pill Switch */}
-            <button
+                        {/* Minimalist Theme Toggle (Lucide Moon / Sun) */}
+            <motion.button
+              whileTap={{ scale: 0.9, rotate: 15 }}
               onClick={toggleTheme}
               type="button"
               aria-label="Toggle theme"
-              className="relative flex items-center bg-slate-200/90 dark:bg-slate-800 p-0.5 rounded-full border border-slate-300 dark:border-slate-700 shadow-inner cursor-pointer transition-colors duration-200 select-none active:scale-95"
+              className="p-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700/80 hover:text-blue-500 dark:hover:text-cyan-400 transition-colors shadow-sm cursor-pointer"
               title={theme === 'dark' ? "Mode Gelap aktif (klik untuk Terang)" : "Mode Terang aktif (klik untuk Gelap)"}
             >
-              <div
-                className={`flex items-center justify-center w-7 h-6 rounded-full text-xs transition-all duration-300 ${theme === 'light'
-                    ? "bg-amber-400 text-slate-900 shadow-md font-bold scale-105"
-                    : "text-slate-400 hover:text-slate-600 dark:text-slate-500"
-                  }`}
-              >
-                <FaSun className="text-xs" />
-              </div>
-              <div
-                className={`flex items-center justify-center w-7 h-6 rounded-full text-xs transition-all duration-300 ${theme === 'dark'
-                    ? "bg-indigo-600 text-white shadow-md font-bold scale-105"
-                    : "text-slate-400 hover:text-slate-600 dark:text-slate-500"
-                  }`}
-              >
-                <FaMoon className="text-xs" />
-              </div>
-            </button>
+              {theme === "dark" ? (
+                <LuMoon className="text-sm stroke-[2.2]" />
+              ) : (
+                <LuSun className="text-sm stroke-[2.2]" />
+              )}
+            </motion.button>
           </div>
         </nav>
       </header>
@@ -159,15 +150,21 @@ const Navbar: React.FC = () => {
             {language === "en" ? "EN" : "ID"}
           </button>
 
-          {/* Quick Theme Toggle */}
-          <button
+          {/* Quick Theme Toggle (Lucide Moon / Sun) */}
+          <motion.button
+            whileTap={{ scale: 0.9, rotate: 15 }}
             onClick={toggleTheme}
             type="button"
-            className="p-1.5 rounded-full bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-amber-400 border border-slate-200 dark:border-slate-800 transition-all active:scale-95"
+            className="p-1.5 rounded-full bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-800 transition-all active:scale-95"
             aria-label="Toggle theme"
+            title={theme === "dark" ? "Mode Gelap aktif (klik untuk Terang)" : "Mode Terang aktif (klik untuk Gelap)"}
           >
-            {theme === "dark" ? <FaSun className="text-xs text-amber-400" /> : <FaMoon className="text-xs text-indigo-600" />}
-          </button>
+            {theme === "dark" ? (
+              <LuMoon className="text-sm stroke-[2.2]" />
+            ) : (
+              <LuSun className="text-sm stroke-[2.2]" />
+            )}
+          </motion.button>
 
           {/* Clean Hamburger Button */}
           <button
