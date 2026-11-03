@@ -23,9 +23,9 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Hero Section
     "hero.available": "Available for new projects",
-    "hero.role": "Frontend Developer",
+    "hero.role": "Full-Stack Web Developer",
     "hero.bio":
-      "Frontend Developer building responsive web applications with React, TypeScript, and clean code architecture. Dedicated to high-performance interfaces and pragmatic engineering.",
+      "Full-Stack Web Developer building modern websites and high-performance application systems. Open for client projects, business websites, e-commerce, and custom digital solutions.",
     "hero.explore": "Explore Projects",
     "hero.contact": "Contact Me",
 
@@ -33,7 +33,7 @@ const translations: Record<Language, Record<string, string>> = {
     "about.badge": "Biography & Focus",
     "about.title": "About Me",
     "about.p1":
-      "Irfan Putra Pratama is an Informatics Engineering undergraduate and Frontend Developer based in Sekayu, South Sumatra, dedicated to building clean, accessible, and high-performance digital experiences.",
+      "Irfan Putra Pratama is a Full-Stack Web Developer and Informatics Engineering student at Politeknik Sekayu, dedicated to building clean, accessible, and high-performance websites and custom application systems.",
     "about.p2":
       "Currently pursuing my degree at Politeknik Sekayu with an outstanding academic record (GPA 3.90/4.00), I focus primarily on modern web ecosystems including React 18, Next.js, TypeScript, and Tailwind CSS.",
     "about.p3":
@@ -43,7 +43,7 @@ const translations: Record<Language, Record<string, string>> = {
     "about.edu_label": "Education",
     "about.edu_val": "Politeknik Sekayu (IT)",
     "about.focus_label": "Focus",
-    "about.focus_val": "Frontend & Web Dev",
+    "about.focus_val": "Full-Stack & Web Dev",
     "about.stack_label": "Core Stack",
     "about.stack_val": "React, Next.js, TS",
 
@@ -137,9 +137,9 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Hero Section
     "hero.available": "Terbuka untuk proyek baru",
-    "hero.role": "Frontend Developer",
+    "hero.role": "Full-Stack Web Developer",
     "hero.bio":
-      "Frontend Developer yang membangun aplikasi web modern berkinerja tinggi dengan React, TypeScript, dan arsitektur kode yang bersih serta terstruktur.",
+      "Full-Stack Web Developer yang membangun website modern dan aplikasi sistem berkinerja tinggi. Siap melayani jasa pembuatan website bisnis, toko online, hingga sistem manajemen data kustom.",
     "hero.explore": "Lihat Proyek",
     "hero.contact": "Hubungi Saya",
 
@@ -147,7 +147,7 @@ const translations: Record<Language, Record<string, string>> = {
     "about.badge": "Biografi & Dedikasi",
     "about.title": "Tentang Saya",
     "about.p1":
-      "Irfan Putra Pratama adalah mahasiswa Teknik Informatika dan Frontend Developer yang berdomisili di Sekayu, Sumatera Selatan, dengan fokus merancang aplikasi web yang cepat, responsif, dan terstruktur rapi.",
+      "Irfan Putra Pratama adalah seorang Full-Stack Web Developer dan mahasiswa Teknik Informatika di Politeknik Sekayu. Berpengalaman membangun website bisnis modern, landing page interaktif, hingga aplikasi sistem manajemen data yang andal dan mudah digunakan.",
     "about.p2":
       "Saat ini aktif menempuh studi di Politeknik Sekayu dengan IPK 3.90/4.00, mendalami teknologi web standar industri—khususnya ekosistem React 18, Next.js, TypeScript, dan Tailwind CSS.",
     "about.p3":
@@ -157,7 +157,7 @@ const translations: Record<Language, Record<string, string>> = {
     "about.edu_label": "Pendidikan",
     "about.edu_val": "Politeknik Sekayu (TI)",
     "about.focus_label": "Fokus",
-    "about.focus_val": "Frontend & Web Dev",
+    "about.focus_val": "Full-Stack & Web Dev",
     "about.stack_label": "Keahlian Inti",
     "about.stack_val": "React, Next.js, TS",
 

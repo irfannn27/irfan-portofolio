@@ -73,9 +73,9 @@ const HeroSection = () => {
             <div className="p-2.5 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-white/[0.08] shadow-sm">
               <div className="flex items-center gap-1.5 text-cyan-500 text-xs font-bold mb-0.5">
                 <HiCode />
-                <span>React / Next</span>
+                <span>Full-Stack</span>
               </div>
-              <p className="text-[10px] text-slate-500 dark:text-slate-400 truncate">TypeScript Stack</p>
+              <p className="text-[10px] text-slate-500 dark:text-slate-400 truncate">Web & Sistem</p>
             </div>
           </div>
 
@@ -165,7 +165,7 @@ const HeroSection = () => {
               <div className="absolute bottom-3 inset-x-3 p-3 rounded-2xl bg-slate-900/85 backdrop-blur-md border border-white/10 text-white flex items-center justify-between">
                 <div>
                   <p className="text-xs font-bold leading-tight">Irfan Putra</p>
-                  <p className="text-[10px] text-cyan-400 font-mono">Frontend Developer</p>
+                  <p className="text-[10px] text-cyan-400 font-mono">Full-Stack Developer</p>
                 </div>
                 <span className="font-mono text-xs font-black px-2 py-0.5 rounded-lg bg-blue-500/20 text-cyan-300 border border-blue-400/30">
                   &lt;IPP/&gt;
