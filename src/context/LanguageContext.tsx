@@ -47,20 +47,25 @@ const translations: Record<Language, Record<string, string>> = {
     "about.stack_label": "Core Stack",
     "about.stack_val": "React, Next.js, TS",
 
-    // What I Do
-    "services.title": "What I Do",
-    "services.s1_badge": "Frontend & Architecture",
-    "services.s1_title": "Web Development",
+        // Client Services & Digital Solutions
+    "services.badge": "Services & Solutions",
+    "services.title": "Client Services & Solutions",
+    "services.subtitle": "Delivering reliable, tailored digital solutions for businesses, institutions, and modern brands.",
+    "services.s1_badge": "Web Presence",
+    "services.s1_title": "Corporate & Government Portals",
     "services.s1_desc":
-      "Building fast, modern, and mobile-friendly websites with clean code architecture and optimal performance.",
-    "services.s2_badge": "UI/UX & Motion Design",
-    "services.s2_title": "UI/UX & Interactive Design",
+      "Professional corporate profiles, government portals, and modern high-converting landing pages tailored to establish trust and credibility across all devices.",
+    "services.s1_ref": "Featured: Bagian Umum Setda Muba • Klinik Smartphone",
+    "services.s2_badge": "E-Commerce",
+    "services.s2_title": "Online Stores & Product Catalogs",
     "services.s2_desc":
-      "Crafting responsive and interactive user interfaces with Tailwind CSS and smooth micro-animations.",
-    "services.s3_badge": "Backend & Cloud Services",
-    "services.s3_title": "Backend & API Integration",
+      "Interactive product showcases, culinary ordering websites, and seamless catalog platforms designed for retail, food services, and personal shopper businesses.",
+    "services.s2_ref": "Featured: FarahShop • Duriat Food Catering",
+    "services.s3_badge": "Full-Stack System",
+    "services.s3_title": "Custom Web Applications & Data Systems",
     "services.s3_desc":
-      "Developing REST APIs, managing database workflows (MongoDB/MySQL), and deploying with Docker on VPS.",
+      "Tailored internal tools, finance management, student attendance, and operational dashboards with secure database storage and automated workflows.",
+    "services.s3_ref": "Featured: SaldaQ Personal Finance • Attendance System",
 
     // Education
     "edu.title": "Education & Academic Background",
@@ -161,20 +166,25 @@ const translations: Record<Language, Record<string, string>> = {
     "about.stack_label": "Keahlian Inti",
     "about.stack_val": "React, Next.js, TS",
 
-    // What I Do
-    "services.title": "Layanan & Keahlian",
-    "services.s1_badge": "Frontend & Arsitektur Web",
-    "services.s1_title": "Pengembangan Web",
+        // Client Services & Digital Solutions
+    "services.badge": "Layanan & Solusi",
+    "services.title": "Layanan & Solusi Digital",
+    "services.subtitle": "Membantu instansi, bisnis, dan UMKM membangun solusi digital yang andal dari konsep hingga deployment.",
+    "services.s1_badge": "Profil Bisnis",
+    "services.s1_title": "Website Bisnis & Instansi Resmi",
     "services.s1_desc":
-      "Membangun website modern, cepat, dan ramah pengguna di perangkat seluler dengan kode yang bersih dan optimal.",
-    "services.s2_badge": "Desain UI/UX & Animasi",
-    "services.s2_title": "Desain UI/UX & Interaktif",
+      "Pembuatan website profil perusahaan, instansi pemerintahan, dan landing page modern yang cepat, elegan, dan meningkatkan kepercayaan klien di semua perangkat.",
+    "services.s1_ref": "Karya: Bagian Umum Setda Muba • Klinik Smartphone",
+    "services.s2_badge": "Toko Online",
+    "services.s2_title": "Toko Online & Katalog Produk",
     "services.s2_desc":
-      "Merancang antarmuka web yang menarik, intuitif, dan responsif dengan Tailwind CSS serta animasi halus.",
-    "services.s3_badge": "Backend & Layanan Cloud",
-    "services.s3_title": "Integrasi Backend & API",
+      "Platform katalog interaktif, website pemesanan katering/kuliner, dan etalase belanja digital yang praktis untuk UMKM, retail, maupun jasa titip (jastip).",
+    "services.s2_ref": "Karya: FarahShop • Duriat Food Catering",
+    "services.s3_badge": "Sistem Full-Stack",
+    "services.s3_title": "Aplikasi Sistem & Manajemen Data",
     "services.s3_desc":
-      "Mengembangkan REST API, mengelola alur basis data (MongoDB/MySQL), serta deployment menggunakan Docker di VPS.",
+      "Perancangan sistem informasi kustom, aplikasi pembukuan keuangan/kas, sistem absensi, dan dashboard operasional dengan basis data yang rapi dan aman.",
+    "services.s3_ref": "Karya: SaldaQ Personal Finance • Attendance System",
 
     // Education
     "edu.title": "Riwayat Pendidikan",

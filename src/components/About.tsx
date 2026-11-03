@@ -1,4 +1,4 @@
-import { HiCode, HiOutlineGlobeAlt, HiOutlineServer, HiOutlineSparkles } from "react-icons/hi";
+import { HiCode, HiOutlineGlobeAlt, HiOutlineShoppingBag, HiOutlineDatabase, HiOutlineSparkles } from "react-icons/hi";
 import { FaMapMarkerAlt, FaGraduationCap, FaLaptopCode, FaRocket } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
@@ -32,30 +32,24 @@ const About = () => {
   const services = [
     {
       badgeKey: "services.s1_badge",
-      badgeColor: "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20",
       icon: <HiOutlineGlobeAlt className="text-2xl text-blue-500" />,
-      accent: "from-blue-500 via-indigo-500 to-cyan-500",
       title: t("services.s1_title"),
       description: t("services.s1_desc"),
-      highlights: ["React 18 & Next.js", "TypeScript Architecture", "Tailwind CSS", "Responsive Mobile-First"],
+      reference: t("services.s1_ref"),
     },
     {
       badgeKey: "services.s2_badge",
-      badgeColor: "bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/20",
-      icon: <HiOutlineSparkles className="text-2xl text-purple-500" />,
-      accent: "from-purple-500 via-pink-500 to-rose-500",
+      icon: <HiOutlineShoppingBag className="text-2xl text-rose-500" />,
       title: t("services.s2_title"),
       description: t("services.s2_desc"),
-      highlights: ["Framer Motion Physics", "Micro-Interactions", "Clean Typography", "Custom Interaction Design"],
+      reference: t("services.s2_ref"),
     },
     {
       badgeKey: "services.s3_badge",
-      badgeColor: "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20",
-      icon: <HiOutlineServer className="text-2xl text-emerald-500" />,
-      accent: "from-emerald-500 via-teal-500 to-cyan-500",
+      icon: <HiOutlineDatabase className="text-2xl text-emerald-500" />,
       title: t("services.s3_title"),
       description: t("services.s3_desc"),
-      highlights: ["Node.js & Express", "MongoDB & MySQL", "RESTful API Design", "Docker VPS Deployment"],
+      reference: t("services.s3_ref"),
     },
   ];
 
@@ -101,70 +95,54 @@ const About = () => {
         ))}
       </div>
 
-      {/* 3. What I Do / Services - Scroll-Craft Sticky Stacking Cards */}
+      {/* 3. Client Services & Digital Solutions - Clean Bespoke Bento Grid (Zero AI Slop) */}
       <div className="pt-10 sm:pt-14">
-        <div className="mb-6 space-y-1">
-          <h2 className="font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white flex items-center gap-2 tracking-tight">
+        <div className="mb-6 space-y-1.5">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-semibold tracking-wide uppercase">
+            <HiOutlineSparkles className="text-sm" />
+            <span>{t("services.badge")}</span>
+          </div>
+          <h2 className="font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white tracking-tight">
             {t("services.title")}
           </h2>
+          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-xl">
+            {t("services.subtitle")}
+          </p>
         </div>
 
-        {/* Sticky Stacking Track (Scroll-Craft Pattern) */}
-        <div className="flex flex-col gap-6 relative pb-16">
-          {services.map((service, index) => {
-            const topOffset = 84 + index * 20; // 84px, 104px, 124px
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 35 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: index * 0.08 }}
-                style={{
-                  top: `${topOffset}px`,
-                }}
-                className="sticky w-full rounded-3xl p-6 sm:p-8 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border border-slate-200/90 dark:border-slate-800 shadow-xl shadow-slate-900/5 dark:shadow-black/50 transition-all duration-300 group overflow-hidden"
-              >
-                {/* Accent line on top of each card */}
-                <div
-                  className={`absolute top-0 inset-x-0 h-1 bg-gradient-to-r ${service.accent}`}
-                />
-
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                  <div className="space-y-3 max-w-xl">
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center shadow-inner">
-                        {service.icon}
-                      </div>
-                      <span className={`text-xs font-semibold px-3 py-1 rounded-full border ${service.badgeColor}`}>
-                        {t(service.badgeKey)}
-                      </span>
-                    </div>
-
-                    <h3 className="font-extrabold text-xl sm:text-2xl text-slate-900 dark:text-white tracking-tight">
-                      {service.title}
-                    </h3>
-                    <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
-                      {service.description}
-                    </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ y: -5 }}
+              transition={{ duration: 0.2 }}
+              className="p-6 sm:p-7 rounded-3xl bg-white/90 dark:bg-slate-900/85 backdrop-blur-md border border-slate-200/90 dark:border-white/[0.08] shadow-sm hover:border-blue-500/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+            >
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-800 dark:text-slate-200 shadow-inner group-hover:scale-105 transition-transform">
+                    {service.icon}
                   </div>
-
-                  {/* Capabilities / Tech Stack Pills */}
-                  <div className="flex flex-wrap md:flex-col gap-2 shrink-0 md:min-w-[200px]">
-                    {service.highlights.map((h, i) => (
-                      <span
-                        key={i}
-                        className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700/80 text-xs font-medium text-slate-700 dark:text-slate-300"
-                      >
-                        <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                        {h}
-                      </span>
-                    ))}
-                  </div>
+                  <span className="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700/80">
+                    {service.badgeKey ? t(service.badgeKey) : ""}
+                  </span>
                 </div>
-              </motion.div>
-            );
-          })}
+
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white tracking-tight mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                  {service.description}
+                </p>
+              </div>
+
+              {/* Real Local Project Reference */}
+              <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center gap-1.5 text-[11px] text-slate-500 dark:text-slate-400 font-mono">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
+                <span className="truncate">{service.reference}</span>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </div>
@@ -172,8 +150,3 @@ const About = () => {
 };
 
 export default About;
-
-
-
-
-
