@@ -22,7 +22,6 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.all_rights": "fann • All rights reserved.",
 
     // Hero Section
-    "hero.greeting": "Hello, I am",
     "hero.available": "Available for new projects",
     "hero.role": "Frontend & Web Developer",
     "hero.bio":
@@ -34,7 +33,7 @@ const translations: Record<Language, Record<string, string>> = {
     "about.badge": "Biography & Focus",
     "about.title": "About Me",
     "about.p1":
-      "I'm Irfan Putra Pratama, an undergraduate Informatics Engineering student and Frontend Developer based in Sekayu, South Sumatra. I specialize in crafting clean, accessible, and responsive web applications.",
+      "Irfan Putra Pratama is an Informatics Engineering undergraduate and Frontend Developer based in Sekayu, South Sumatra, dedicated to building clean, accessible, and high-performance digital experiences.",
     "about.p2":
       "Currently pursuing my degree at Politeknik Sekayu with an outstanding academic record (GPA 3.90/4.00), I focus primarily on modern web ecosystems including React 18, Next.js, TypeScript, and Tailwind CSS.",
     "about.p3":
@@ -137,7 +136,6 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.all_rights": "fann • Hak Cipta Dilindungi.",
 
     // Hero Section
-    "hero.greeting": "Halo, saya",
     "hero.available": "Terbuka untuk proyek baru",
     "hero.role": "Frontend & Web Developer",
     "hero.bio":
@@ -149,7 +147,7 @@ const translations: Record<Language, Record<string, string>> = {
     "about.badge": "Biografi & Dedikasi",
     "about.title": "Tentang Saya",
     "about.p1":
-      "Halo! Saya Irfan Putra Pratama, mahasiswa Teknik Informatika dan Frontend Developer yang berdomisili di Sekayu, Sumatera Selatan. Saya fokus merancang aplikasi web yang cepat, responsif, dan mudah digunakan.",
+      "Irfan Putra Pratama adalah mahasiswa Teknik Informatika dan Frontend Developer yang berdomisili di Sekayu, Sumatera Selatan, dengan fokus merancang aplikasi web yang cepat, responsif, dan terstruktur rapi.",
     "about.p2":
       "Saat ini aktif menempuh studi di Politeknik Sekayu dengan IPK 3.90/4.00, mendalami teknologi web standar industri—khususnya ekosistem React 18, Next.js, TypeScript, dan Tailwind CSS.",
     "about.p3":
