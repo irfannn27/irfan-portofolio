@@ -237,7 +237,7 @@ const Navbar: React.FC = () => {
 
             {/* Handle / Role */}
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-              @irfannn27 • @skawnfaa
+              @rrfnie • @skawnfaa
             </p>
 
             {/* Toggles Row (Dual Pills: Language + Theme) */}
@@ -343,11 +343,11 @@ const Navbar: React.FC = () => {
                 <FaInstagram className="text-base" />
               </a>
               <a
-                href="https://github.com/irfannn27"
+                href="https://github.com/rrfnie"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 bg-slate-800 dark:bg-slate-700 text-white rounded-xl shadow-md hover:scale-110 active:scale-95 transition-all"
-                title="GitHub (@irfannn27)"
+                title="GitHub (@rrfnie)"
               >
                 <FaGithub className="text-base" />
               </a>

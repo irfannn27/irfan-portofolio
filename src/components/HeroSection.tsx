@@ -121,13 +121,13 @@ const HeroSection = () => {
             {/* Social handles */}
             <div className="flex items-center gap-2 pl-1">
               <motion.a
-                href="https://github.com/irfannn27"
+                href="https://github.com/rrfnie"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 className="p-3 bg-white/90 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:text-blue-500 dark:hover:text-cyan-400 rounded-2xl shadow-sm transition-all"
-                title="GitHub (@irfannn27)"
+                title="GitHub (@rrfnie)"
               >
                 <FaGithub className="text-base" />
               </motion.a>
