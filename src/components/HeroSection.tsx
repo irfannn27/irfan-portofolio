@@ -67,15 +67,20 @@ const HeroSection = () => {
 
       {/* Info Section */}
       <div className="space-y-3 px-2">
-        {/* Friendly greeting pill */}
+        {/* Sleek Live Availability Badge (Bespoke Designer Style) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2, duration: 0.4 }}
-          className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-semibold tracking-wide mb-1"
+          transition={{ delay: 0.15, duration: 0.4 }}
+          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/5 dark:bg-white/[0.06] border border-slate-200 dark:border-white/[0.1] text-xs font-semibold tracking-wide backdrop-blur-md mb-1"
         >
-          <span className="animate-wave inline-block origin-bottom-right">👋</span>
-          <span>{t("hero.greeting")}</span>
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+          </span>
+          <span className="text-slate-700 dark:text-slate-300">
+            {t("hero.available")}
+          </span>
         </motion.div>
 
         <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
@@ -122,16 +127,16 @@ const HeroSection = () => {
           </motion.div>
         </div>
 
-        {/* Social Links with Spring Physics */}
-        <div className="flex gap-3 pt-3 justify-center items-center">
+        {/* Social Links with Cohesive Monochrome Glass Aesthetics */}
+        <div className="flex gap-2.5 pt-3 justify-center items-center">
           <motion.a
             href="https://www.instagram.com/skawnfaa/"
             target="_blank"
             rel="noopener noreferrer"
-            whileHover={{ scale: 1.15, y: -3 }}
+            whileHover={{ scale: 1.1, y: -2 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 400, damping: 15 }}
-            className="p-2.5 bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white rounded-xl shadow-md"
+            className="p-2.5 bg-white/80 dark:bg-slate-900/80 hover:bg-rose-500 hover:text-white dark:hover:bg-rose-600 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 rounded-2xl shadow-sm transition-all duration-200"
             title="Instagram (@skawnfaa)"
           >
             <FaInstagram className="text-base sm:text-lg" />
@@ -141,10 +146,10 @@ const HeroSection = () => {
             href="https://github.com/irfannn27"
             target="_blank"
             rel="noopener noreferrer"
-            whileHover={{ scale: 1.15, y: -3 }}
+            whileHover={{ scale: 1.1, y: -2 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 400, damping: 15 }}
-            className="p-2.5 bg-slate-800 dark:bg-slate-700 text-white rounded-xl shadow-md"
+            className="p-2.5 bg-white/80 dark:bg-slate-900/80 hover:bg-slate-900 hover:text-white dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 rounded-2xl shadow-sm transition-all duration-200"
             title="GitHub (@irfannn27)"
           >
             <FaGithub className="text-base sm:text-lg" />
@@ -154,10 +159,10 @@ const HeroSection = () => {
             href="https://www.linkedin.com/in/irfan-putra-pratama-54b10734b"
             target="_blank"
             rel="noopener noreferrer"
-            whileHover={{ scale: 1.15, y: -3 }}
+            whileHover={{ scale: 1.1, y: -2 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 400, damping: 15 }}
-            className="p-2.5 bg-blue-600 text-white rounded-xl shadow-md"
+            className="p-2.5 bg-white/80 dark:bg-slate-900/80 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 rounded-2xl shadow-sm transition-all duration-200"
             title="LinkedIn (Irfan Putra Pratama)"
           >
             <FaLinkedin className="text-base sm:text-lg" />

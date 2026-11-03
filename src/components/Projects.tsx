@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { HiSparkles } from "react-icons/hi";
 import CardProject from "./CardProject";
 import { useLanguage } from "../context/LanguageContext";
 
@@ -23,7 +24,7 @@ const Projects = () => {
     {
       title: "Bagian Umum Setda Kab. Muba",
       category: "gov",
-      categoryTag: "🏛️ Official Government",
+      categoryTag: "Official Government",
       description: t("projects.setdamuba_desc"),
       image: "setdamuba.png",
       link: "https://bagianumumsetda.mubakab.go.id/",
@@ -37,7 +38,7 @@ const Projects = () => {
     {
       title: "Irfan Putra • Official Portfolio",
       category: "apps",
-      categoryTag: "🚀 Official Web Platform",
+      categoryTag: "Official Web Platform",
       description: t("projects.rrfnnn_desc"),
       image: "rrfnnn-portfolio.jpg",
       link: "https://www.rrfnnn.my.id/",
@@ -50,7 +51,7 @@ const Projects = () => {
     {
       title: "FarahShop",
       category: "commerce",
-      categoryTag: "🛍️ E-Commerce & Retail",
+      categoryTag: "E-Commerce & Retail",
       description: t("projects.farahshop_desc"),
       image: "farahshop.png",
       link: "https://farahhshop.netlify.app/",
@@ -63,7 +64,7 @@ const Projects = () => {
     {
       title: "Klinik Smartphone",
       category: "commerce",
-      categoryTag: "📱 Tech Repair Service",
+      categoryTag: "Tech Repair Platform",
       description: t("projects.klinik_desc"),
       image: "kliniksmarphone.png",
       link: "https://kliniksmarphone.netlify.app/",
@@ -76,7 +77,7 @@ const Projects = () => {
     {
       title: "Personal Finance - SaldaQ",
       category: "apps",
-      categoryTag: "💳 Personal Finance App",
+      categoryTag: "Personal Finance App",
       description: t("projects.saldaq_desc"),
       image: "saldaq.png",
       tech: [
@@ -91,7 +92,7 @@ const Projects = () => {
     {
       title: "Duriat Food",
       category: "commerce",
-      categoryTag: "🍱 Catering & Kuliner",
+      categoryTag: "Culinary & Catering",
       description: t("projects.duriat_desc"),
       image: "duriatfood.png",
       link: "https://duriatfood.netlify.app/",
@@ -104,7 +105,7 @@ const Projects = () => {
     {
       title: "FannMovie",
       category: "apps",
-      categoryTag: "🎬 Movie Platform",
+      categoryTag: "Movie & Media Catalog",
       description: t("projects.movie_desc"),
       image: "fannmovies.png",
       link: "https://fannmoviess.netlify.app/",
@@ -118,7 +119,7 @@ const Projects = () => {
     {
       title: "FannsRecipes",
       category: "apps",
-      categoryTag: "🍳 Recipe & Cooking",
+      categoryTag: "Interactive Cooking App",
       description: t("projects.recipes_desc"),
       image: "fannrecep.png",
       link: "https://fannreceipes.netlify.app/",
@@ -153,7 +154,8 @@ const Projects = () => {
           transition={{ duration: 0.4 }}
           className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-semibold tracking-wide uppercase"
         >
-          <span>✨ Portfolio Works</span>
+          <HiSparkles className="text-blue-500 text-sm" />
+          <span>Portfolio Works</span>
         </motion.div>
 
         <h1 className="font-extrabold text-3xl sm:text-4xl text-slate-900 dark:text-white tracking-tight">

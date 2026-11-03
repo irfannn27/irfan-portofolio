@@ -79,18 +79,18 @@ const About = () => {
         </div>
       </div>
 
-      {/* 2. Quick Highlight Stats Grid */}
+      {/* 2. Quick Highlight Stats Bento Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-4">
         {highlights.map((item, index) => (
           <div
             key={index}
-            className="p-3.5 sm:p-4 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-sm flex items-center gap-3 transition-transform hover:scale-[1.02]"
+            className="p-4 sm:p-5 rounded-3xl bg-white/90 dark:bg-slate-900/80 border border-slate-200/90 dark:border-white/[0.08] shadow-sm flex items-center gap-3.5 transition-all duration-300 hover:scale-[1.02] hover:border-blue-500/40"
           >
-            <div className="p-2 sm:p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800">
+            <div className="p-2.5 rounded-2xl bg-slate-100 dark:bg-slate-800 shadow-inner">
               {item.icon}
             </div>
             <div>
-              <p className="text-[10px] sm:text-xs text-slate-400 dark:text-slate-500 font-medium uppercase tracking-wider">
+              <p className="text-[10px] sm:text-[11px] text-slate-400 dark:text-slate-500 font-semibold uppercase tracking-wider">
                 {item.label}
               </p>
               <p className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white mt-0.5">

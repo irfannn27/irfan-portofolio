@@ -1,4 +1,4 @@
-import { FaUniversity, FaAward, FaCalendarAlt, FaLaptopCode } from "react-icons/fa";
+import { FaUniversity, FaAward, FaCalendarAlt, FaGraduationCap, FaLaptopCode } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 
@@ -6,8 +6,13 @@ export default function Education() {
   const { t } = useLanguage();
 
   return (
-    <div className="section section-2 pt-8 sm:pt-10">
-      <div className="mb-4 space-y-1">
+    <div className="section section-2 pt-10 sm:pt-14">
+      <div className="mb-6 space-y-2">
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-semibold tracking-wide uppercase">
+          <FaGraduationCap className="text-sm" />
+          <span>Academic</span>
+        </div>
+
         <h1 className="font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white flex items-center gap-2 tracking-tight">
           {t("edu.title")}
         </h1>

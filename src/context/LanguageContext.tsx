@@ -22,7 +22,8 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.all_rights": "fann • All rights reserved.",
 
     // Hero Section
-    "hero.greeting": "Hi, I'm",
+    "hero.greeting": "Hello, I am",
+    "hero.available": "Available for new projects",
     "hero.role": "Frontend & Web Developer",
     "hero.bio":
       "Passionate Software Developer crafting modern, high-performance web applications with seamless user experiences.",
@@ -30,8 +31,8 @@ const translations: Record<Language, Record<string, string>> = {
     "hero.contact": "Contact Me",
 
     // About Section
-    "about.badge": "Biography & Passion",
-    "about.title": "🚀 About Me",
+    "about.badge": "Biography & Focus",
+    "about.title": "About Me",
     "about.p1":
       "Hello! I am Irfan Putra Pratama, a passionate Frontend & Web Developer based in Sekayu, Palembang (South Sumatra). I specialize in designing and engineering modern, accessible, and high-performance digital experiences.",
     "about.p2":
@@ -48,7 +49,7 @@ const translations: Record<Language, Record<string, string>> = {
     "about.stack_val": "React, Next.js, TS",
 
     // What I Do
-    "services.title": "⚡ What I Do",
+    "services.title": "What I Do",
     "services.s1_badge": "Frontend & Architecture",
     "services.s1_title": "Web Development",
     "services.s1_desc":
@@ -63,7 +64,7 @@ const translations: Record<Language, Record<string, string>> = {
       "Developing REST APIs, managing database workflows (MongoDB/MySQL), and deploying with Docker on VPS.",
 
     // Education
-    "edu.title": "🎓 Education & Studies",
+    "edu.title": "Education & Academic Background",
     "edu.poltek_major": "Informatics Engineering",
     "edu.poltek_period": "August 2024 - Present",
     "edu.poltek_status": "Currently Studying",
@@ -76,7 +77,11 @@ const translations: Record<Language, Record<string, string>> = {
     "edu.focus_val": "Software & Web Engineering",
 
     // Skills
-    "skills.title": "💻 Tech & Tools",
+    "skills.title": "Technical Ecosystem & Stack",
+    "skills.subtitle": "Modern frameworks, languages, databases, and developer workflows I use to engineer robust products.",
+    "skills.cat_frontend": "Frontend & UI Architecture",
+    "skills.cat_backend": "Backend & Database Systems",
+    "skills.cat_tools": "Workflow, DevOps & Design",
 
     // Projects
     "projects.title": "Featured Projects",
@@ -105,7 +110,7 @@ const translations: Record<Language, Record<string, string>> = {
       "FannsRecipes is an interactive cooking companion application providing over 1,000+ step-by-step recipes, categorized cooking guides, and instant recipe search for home chefs.",
 
     // Contact
-    "contact.title": "📬 Let's Connect",
+    "contact.title": "Let's Connect",
     "contact.subtitle":
       "Have a project in mind, an exciting job opportunity, or just want to say hi? Feel free to send a message!",
     "contact.name": "Your Name",
@@ -132,6 +137,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Hero Section
     "hero.greeting": "Halo, saya",
+    "hero.available": "Terbuka untuk proyek baru",
     "hero.role": "Frontend & Web Developer",
     "hero.bio":
       "Pengembang Web berdedikasi yang membangun aplikasi web modern berkinerja tinggi dengan pengalaman pengguna yang mulus.",
@@ -140,7 +146,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // About Section
     "about.badge": "Biografi & Dedikasi",
-    "about.title": "🚀 Tentang Saya",
+    "about.title": "Tentang Saya",
     "about.p1":
       "Halo! Saya Irfan Putra Pratama, seorang Frontend & Web Developer yang berdomisili di Sekayu, Palembang (Sumatera Selatan). Saya berspesialisasi dalam merancang dan mengembangkan pengalaman web digital yang modern, responsif, dan berkinerja tinggi.",
     "about.p2":
@@ -157,7 +163,7 @@ const translations: Record<Language, Record<string, string>> = {
     "about.stack_val": "React, Next.js, TS",
 
     // What I Do
-    "services.title": "⚡ Layanan & Keahlian",
+    "services.title": "Layanan & Keahlian",
     "services.s1_badge": "Frontend & Arsitektur Web",
     "services.s1_title": "Pengembangan Web",
     "services.s1_desc":
@@ -172,7 +178,7 @@ const translations: Record<Language, Record<string, string>> = {
       "Mengembangkan REST API, mengelola alur basis data (MongoDB/MySQL), serta deployment menggunakan Docker di VPS.",
 
     // Education
-    "edu.title": "🎓 Riwayat Pendidikan",
+    "edu.title": "Riwayat Pendidikan",
     "edu.poltek_major": "Teknik Informatika",
     "edu.poltek_period": "Agustus 2024 - Sekarang",
     "edu.poltek_status": "Sedang Menempuh Studi",
@@ -185,7 +191,11 @@ const translations: Record<Language, Record<string, string>> = {
     "edu.focus_val": "Rekayasa Web & Perangkat Lunak",
 
     // Skills
-    "skills.title": "💻 Teknologi & Tools",
+    "skills.title": "Ekosistem & Keahlian Teknis",
+    "skills.subtitle": "Framework modern, bahasa pemrograman, database, dan alur kerja pengembangan yang saya gunakan untuk membangun produk andal.",
+    "skills.cat_frontend": "Arsitektur Frontend & UI",
+    "skills.cat_backend": "Sistem Backend & Database",
+    "skills.cat_tools": "Tools, Alur Kerja & Desain",
 
     // Projects
     "projects.title": "Proyek Unggulan",
@@ -214,7 +224,7 @@ const translations: Record<Language, Record<string, string>> = {
       "FannsRecipes adalah aplikasi resep masakan interaktif yang menyediakan lebih dari 1.000+ panduan memasak langkah-demi-langkah dan pencarian resep instan.",
 
     // Contact
-    "contact.title": "📬 Hubungi Saya",
+    "contact.title": "Hubungi Saya",
     "contact.subtitle":
       "Punya ide proyek, tawaran kerja sama menarik, atau sekadar ingin menyapa? Jangan ragu untuk mengirim pesan!",
     "contact.name": "Nama Anda",

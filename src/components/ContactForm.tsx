@@ -1,6 +1,7 @@
 import { useForm } from '@formspree/react';
 import { useEffect } from 'react';
 import Swal from 'sweetalert2'
+import { HiMail } from 'react-icons/hi';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function ContactForm() {
@@ -23,10 +24,16 @@ export default function ContactForm() {
   return (
     <section className="section section-2">
       <div className="py-6 sm:py-10 px-2 sm:px-4 mx-auto w-full max-w-[540px]">
-        <div className="bg-white dark:bg-slate-800/80 p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-700/80 shadow-md backdrop-blur-sm transition-all duration-300">
-          <h2 className="mb-2 text-2xl sm:text-3xl font-extrabold text-center text-slate-900 dark:text-white tracking-tight">
-            {t("contact.title")}
-          </h2>
+        <div className="bg-white/95 dark:bg-slate-900/90 p-6 sm:p-8 rounded-3xl border border-slate-200/90 dark:border-white/[0.08] shadow-2xl backdrop-blur-xl transition-all duration-300">
+          <div className="flex flex-col items-center mb-3">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-semibold tracking-wide uppercase mb-3">
+              <HiMail className="text-sm" />
+              <span>Get In Touch</span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-center text-slate-900 dark:text-white tracking-tight">
+              {t("contact.title")}
+            </h2>
+          </div>
           <p className="mb-6 text-xs sm:text-sm text-center text-slate-600 dark:text-slate-400">
             {t("contact.subtitle")}
           </p>

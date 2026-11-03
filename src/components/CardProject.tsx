@@ -95,8 +95,9 @@ export default function CardProject({
           {/* Category Tag & Live Link Header */}
           <div className="flex items-center justify-between gap-2 flex-wrap">
             {categoryTag && (
-              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold tracking-wide border border-slate-200 dark:border-slate-700/80">
-                {categoryTag}
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 text-xs font-semibold tracking-wide border border-slate-200 dark:border-slate-700/80">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                <span>{categoryTag}</span>
               </span>
             )}
             {link && (
