@@ -142,237 +142,145 @@ const Navbar: React.FC = () => {
       </header>
 
       {/* =========================================================
-          2. MOBILE TOP BAR (visible on mobile only, md:hidden)
+          2. MINIMALIST MOBILE TOP BAR (md:hidden)
           ========================================================= */}
-      <header className="md:hidden fixed top-0 left-0 right-0 z-[99999] px-4 py-3 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80 flex justify-between items-center font-poppins transition-colors duration-300">
-        <Link to="/" className="flex items-center gap-2.5">
-          <img
-            src="./img/myfoto.jpg"
-            alt="Irfan"
-            className="w-8 h-8 rounded-full object-cover border border-blue-500"
-          />
-          <span className="font-bold text-sm tracking-tight text-slate-900 dark:text-white">
+      <header className="md:hidden fixed top-0 left-0 right-0 z-[99999] px-4 py-3 bg-white/85 dark:bg-slate-950/85 backdrop-blur-xl border-b border-slate-200/80 dark:border-slate-800/80 flex justify-between items-center font-poppins transition-colors duration-300">
+        <Link to="/" className="flex items-center gap-2 group">
+          <span className="font-mono text-xs font-black px-2 py-0.5 rounded-lg bg-blue-500/10 dark:bg-blue-500/20 text-blue-600 dark:text-cyan-400 border border-blue-500/30">
+            &lt;IPP/&gt;
+          </span>
+          <span className="font-extrabold text-sm tracking-tight text-slate-900 dark:text-white">
             Irfan Putra
           </span>
         </Link>
 
-        <div className="flex items-center gap-2">
-          {/* Quick Language switch on mobile top bar */}
+        <div className="flex items-center gap-1.5">
+          {/* Quick Language switch */}
           <button
             onClick={toggleLanguage}
             type="button"
-            className="px-2 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800/90 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 text-xs font-bold transition-colors"
+            className="px-2.5 py-1 rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 text-xs font-bold transition-all active:scale-95"
             title="Switch Language"
           >
             {language === "en" ? "EN" : "ID"}
           </button>
 
-          {/* Quick theme toggle */}
+          {/* Quick Theme Toggle */}
           <button
             onClick={toggleTheme}
             type="button"
-            className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800/90 text-slate-700 dark:text-amber-300 border border-slate-200 dark:border-slate-700 transition-colors"
+            className="p-2 rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-amber-400 border border-slate-200 dark:border-slate-800 transition-all active:scale-95"
             aria-label="Toggle theme"
           >
-            {theme === 'dark' ? <FaSun className="text-sm text-amber-400" /> : <FaMoon className="text-sm text-indigo-600" />}
+            {theme === "dark" ? <FaSun className="text-xs text-amber-400" /> : <FaMoon className="text-xs text-indigo-600" />}
           </button>
 
-          {/* Hamburger button */}
+          {/* Minimalist Hamburger Button */}
           <button
-            onClick={() => setIsOpen(true)}
+            onClick={() => setIsOpen(!isOpen)}
             type="button"
-            className="p-2 rounded-xl bg-blue-600 text-white shadow-md shadow-blue-500/20 active:scale-95 transition-all"
-            aria-label="Open menu"
+            className="p-2 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 transition-all active:scale-95 shadow-sm"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
           >
-            <HiOutlineMenuAlt3 className="text-xl" />
+            {isOpen ? <HiX className="text-lg" /> : <HiOutlineMenuAlt3 className="text-lg" />}
           </button>
         </div>
       </header>
 
       {/* =========================================================
-          3. FULL SCREEN MOBILE MENU (TikTok / Linktree Inspired!)
+          3. MINIMALIST BESPOKE MOBILE MENU SHEET (Zero AI Slop)
           ========================================================= */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="md:hidden fixed inset-0 z-[999999] bg-slate-50/98 dark:bg-slate-950/98 backdrop-blur-2xl text-slate-900 dark:text-white flex flex-col justify-between overflow-y-auto font-poppins p-6">
-
-          {/* Top Close Button */}
-          <div className="flex justify-between items-center w-full">
-            <span className="text-xs font-semibold text-slate-500 tracking-wider uppercase">
-              Navigation Menu
-            </span>
-            <button
+          <>
+            {/* Backdrop Blur Overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
               onClick={() => setIsOpen(false)}
-              type="button"
-              className="p-2.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors shadow-sm active:scale-95"
-              aria-label="Close menu"
+              className="md:hidden fixed inset-0 z-[99998] bg-slate-950/60 backdrop-blur-sm"
+            />
+
+            {/* Slide-down Minimalist Editorial Sheet */}
+            <motion.nav
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -20, opacity: 0 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
+              className="md:hidden fixed top-[55px] inset-x-0 z-[99999] bg-white/95 dark:bg-slate-950/95 backdrop-blur-2xl border-b border-slate-200 dark:border-slate-800 p-5 font-poppins shadow-2xl flex flex-col gap-4"
             >
-              <HiX className="text-xl" />
-            </button>
-          </div>
-
-          {/* Center Profile & Options (Exactly as in TikTok screenshot) */}
-          <div className="flex flex-col items-center text-center my-auto py-6 max-w-sm mx-auto w-full">
-            {/* Avatar Profile */}
-            <div className="relative mb-3 group">
-              <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 opacity-70 blur-sm"></div>
-              <img
-                src="./img/myfoto.jpg"
-                alt="Irfan Putra Pratama"
-                className="relative w-24 h-24 rounded-full object-cover border-2 border-white dark:border-slate-800 shadow-2xl"
-              />
-            </div>
-
-            {/* Name + Verified Badge */}
-            <div className="flex flex-col items-center justify-center gap-1">
-              <h2 className="text-xl font-extrabold text-slate-900 dark:text-white">
-                Irfan Putra Pratama
-              </h2>
+              {/* Clean Numbered Editorial Links */}
+              <div className="flex flex-col gap-1">
+                {navItems.map((item, index) => {
+                  const active = isActive(item.path);
+                  return (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      onClick={() => setIsOpen(false)}
+                      className={`flex items-center justify-between px-4 py-3 rounded-2xl transition-all duration-200 ${
+                        active
+                          ? "bg-blue-600 text-white font-bold shadow-md shadow-blue-500/20"
+                          : "text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-900 font-medium"
+                      }`}
+                    >
+                      <div className="flex items-center gap-3">
+                        <span className={`font-mono text-xs ${active ? "text-blue-200" : "text-slate-400"}`}>
+                          0${index + 1}
+                        </span>
+                        <span className="text-sm sm:text-base">{item.label}</span>
+                      </div>
+                      <HiArrowRight className={`text-sm ${active ? "text-white" : "text-slate-400"}`} />
+                    </Link>
+                  );
+                })}
               </div>
 
-            {/* Handle / Role */}
-            <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-              @rrfnie • @skawnfaa
-            </p>
+              {/* Bottom Strip: Direct Contact Button & Social Handles */}
+              <div className="pt-3 border-t border-slate-200/80 dark:border-slate-800/80 flex items-center justify-between gap-3">
+                <Link
+                  to="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold text-xs shadow-sm hover:opacity-95 active:scale-95 transition-all"
+                >
+                  <FaComments className="text-sm" />
+                  <span>{t("nav.lets_talk")}</span>
+                </Link>
 
-            {/* Toggles Row (Dual Pills: Language + Theme) */}
-            <div className="flex items-center gap-2.5 mt-4 mb-6">
-              {/* Language Switcher Pill */}
-              <button
-                onClick={toggleLanguage}
-                type="button"
-                className="flex items-center bg-slate-200 dark:bg-slate-800/90 p-1 rounded-full border border-slate-300 dark:border-slate-700 shadow-inner cursor-pointer"
-                title="Switch Language"
-              >
-                <div
-                  className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-xs transition-all duration-300 ${language === "id"
-                      ? "bg-rose-600 text-white font-bold shadow-sm"
-                      : "text-slate-500 hover:text-slate-200"
-                    }`}
-                >
-                  <span className="text-[10px]">ID</span>
-                </div>
-                <div
-                  className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-xs transition-all duration-300 ${language === "en"
-                      ? "bg-blue-600 text-white font-bold shadow-sm"
-                      : "text-slate-500 hover:text-slate-200"
-                    }`}
-                >
-                  <span className="text-[10px]">EN</span>
-                </div>
-              </button>
-
-              {/* Theme Switcher Pill */}
-              <button
-                onClick={toggleTheme}
-                type="button"
-                className="flex items-center bg-slate-200 dark:bg-slate-800/90 p-1 rounded-full border border-slate-300 dark:border-slate-700 shadow-inner cursor-pointer"
-                title="Ganti Mode Terang / Gelap"
-              >
-                <div
-                  className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-xs transition-all duration-300 ${theme === 'light'
-                      ? "bg-amber-400 text-slate-950 font-bold shadow-sm"
-                      : "text-slate-400 hover:text-slate-200"
-                    }`}
-                >
-                  <FaSun className="text-xs" />
-                  <span className="text-[10px]">Light</span>
-                </div>
-                <div
-                  className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-xs transition-all duration-300 ${theme === 'dark'
-                      ? "bg-indigo-600 text-white font-bold shadow-sm"
-                      : "text-slate-500 hover:text-slate-300"
-                    }`}
-                >
-                  <FaMoon className="text-xs" />
-                  <span className="text-[10px]">Dark</span>
-                </div>
-              </button>
-            </div>
-
-            {/* Vertical Menu Cards (Home, About, Projects, Contact) */}
-            <div className="flex flex-col gap-2.5 w-full">
-              {navItems.map((item) => {
-                const active = isActive(item.path);
-                return (
-                  <Link
-                    key={item.path}
-                    to={item.path}
-                    className={`w-full flex items-center justify-between px-4 py-3.5 rounded-2xl transition-all duration-200 border ${active
-                        ? "bg-blue-600 text-white border-blue-500 shadow-lg shadow-blue-500/25 font-semibold"
-                        : "bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-850 shadow-sm"
-                      }`}
+                <div className="flex items-center gap-1.5 shrink-0">
+                  <a
+                    href="https://github.com/rrfnie"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:text-blue-500 border border-slate-200 dark:border-slate-800 transition-colors"
+                    title="GitHub (@rrfnie)"
                   >
-                    <div className="flex items-center gap-3">
-                      <span className={active ? "text-white" : "text-blue-500"}>
-                        {item.icon}
-                      </span>
-                      <span className="text-base">{item.label}</span>
-                    </div>
-                    <HiArrowRight className={`text-base ${active ? "text-white" : "text-slate-400"}`} />
-                  </Link>
-                );
-              })}
-            </div>
-
-            {/* Highlight Action Button (Green bordered Smart Talk style) */}
-            <div className="w-full mt-4">
-              <Link
-                to="/contact"
-                className="w-full flex items-center justify-center gap-2 px-4 py-3.5 rounded-2xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border-2 border-emerald-500/50 font-bold text-sm shadow-sm transition-all active:scale-95"
-              >
-                <FaComments className="text-lg text-emerald-500" />
-                <span>{t("nav.lets_talk")}</span>
-              </Link>
-            </div>
-
-            {/* Social Links inside Mobile Drawer */}
-            <div className="flex items-center justify-center gap-3 mt-4">
-              <a
-                href="https://www.instagram.com/skawnfaa/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2.5 bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white rounded-xl shadow-md hover:scale-110 active:scale-95 transition-all"
-                title="Instagram (@skawnfaa)"
-              >
-                <FaInstagram className="text-base" />
-              </a>
-              <a
-                href="https://github.com/rrfnie"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2.5 bg-slate-800 dark:bg-slate-700 text-white rounded-xl shadow-md hover:scale-110 active:scale-95 transition-all"
-                title="GitHub (@rrfnie)"
-              >
-                <FaGithub className="text-base" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/irfan-putra-pratama-54b10734b"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2.5 bg-blue-600 text-white rounded-xl shadow-md hover:scale-110 active:scale-95 transition-all"
-                title="LinkedIn (Irfan Putra Pratama)"
-              >
-                <FaLinkedin className="text-base" />
-              </a>
-            </div>
-          </div>
-
-          {/* Copyright Footer */}
-          <div className="text-center pt-4 pb-2 border-t border-slate-200 dark:border-slate-800/80">
-            <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">
-              COPYRIGHT © {new Date().getFullYear()}
-            </p>
-            <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-              fann • All rights reserved.
-            </p>
-          </div>
-        </motion.div>
+                    <FaGithub className="text-sm" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/irfan-putra-pratama-54b10734b"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:text-blue-500 border border-slate-200 dark:border-slate-800 transition-colors"
+                    title="LinkedIn"
+                  >
+                    <FaLinkedin className="text-sm" />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/skawnfaa/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:text-rose-500 border border-slate-200 dark:border-slate-800 transition-colors"
+                    title="Instagram (@skawnfaa)"
+                  >
+                    <FaInstagram className="text-sm" />
+                  </a>
+                </div>
+              </div>
+            </motion.nav>
+          </>
         )}
       </AnimatePresence>
     </>
