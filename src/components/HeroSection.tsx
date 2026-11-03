@@ -183,7 +183,7 @@ const HeroSection = () => {
               <div className="absolute bottom-3 inset-x-3 p-3 rounded-2xl bg-slate-900/85 backdrop-blur-md border border-white/10 text-white flex items-center justify-between">
                 <div>
                   <p className="text-xs font-bold leading-tight">Irfan Putra</p>
-                  <p className="text-[10px] text-cyan-400 font-mono">Software Engineer</p>
+                  <p className="text-[10px] text-cyan-400 font-mono">Frontend Developer</p>
                 </div>
                 <span className="font-mono text-xs font-black px-2 py-0.5 rounded-lg bg-blue-500/20 text-cyan-300 border border-blue-400/30">
                   &lt;IPP/&gt;

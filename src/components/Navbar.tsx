@@ -1,3 +1,4 @@
+import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
@@ -74,19 +75,30 @@ const Navbar: React.FC = () => {
         ref={navbarRef}
       >
         <nav className="pointer-events-auto mt-5 px-4 py-2.5 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md text-slate-800 dark:text-white flex justify-between items-center shadow-2xl w-[92%] max-w-[480px] rounded-full border border-slate-200 dark:border-slate-700/80 transition-all duration-300">
-          <div className="flex gap-1.5 list-none font-medium text-sm items-center">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`px-3 py-1.5 rounded-full transition-all duration-200 cursor-pointer ${isActive(item.path)
-                    ? "bg-blue-600 text-white font-semibold shadow-md shadow-blue-500/25"
-                    : "text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60"
+          <div className="flex gap-1 list-none font-medium text-sm items-center relative">
+            {navItems.map((item) => {
+              const active = isActive(item.path);
+              return (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={`relative px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-colors duration-200 cursor-pointer ${
+                    active
+                      ? "text-white"
+                      : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
                   }`}
-              >
-                {item.label}
-              </Link>
-            ))}
+                >
+                  {active && (
+                    <motion.div
+                      layoutId="desktopNavActivePill"
+                      className="absolute inset-0 bg-blue-600 rounded-full shadow-md shadow-blue-500/25 -z-10"
+                      transition={{ type: "spring", stiffness: 450, damping: 35 }}
+                    />
+                  )}
+                  <span>{item.label}</span>
+                </Link>
+              );
+            })}
           </div>
 
           <div className="flex items-center gap-1.5">
@@ -97,7 +109,7 @@ const Navbar: React.FC = () => {
               className="px-2.5 py-1 text-xs font-bold rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 hover:border-blue-500 transition-all flex items-center gap-1 active:scale-95"
               title="Ganti Bahasa / Switch Language"
             >
-              <span>{language === "en" ? "🇬🇧 EN" : "🇮🇩 ID"}</span>
+              <span>{language === "en" ? "EN" : "ID"}</span>
             </button>
 
             {/* Theme Dual Pill Switch */}
@@ -180,8 +192,15 @@ const Navbar: React.FC = () => {
       {/* =========================================================
           3. FULL SCREEN MOBILE MENU (TikTok / Linktree Inspired!)
           ========================================================= */}
-      {isOpen && (
-        <div className="md:hidden fixed inset-0 z-[999999] bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white flex flex-col justify-between overflow-y-auto font-poppins p-6 transition-all duration-300 animate-fadeIn">
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+            className="md:hidden fixed inset-0 z-[999999] bg-slate-50/98 dark:bg-slate-950/98 backdrop-blur-2xl text-slate-900 dark:text-white flex flex-col justify-between overflow-y-auto font-poppins p-6">
+
           {/* Top Close Button */}
           <div className="flex justify-between items-center w-full">
             <span className="text-xs font-semibold text-slate-500 tracking-wider uppercase">
@@ -237,7 +256,7 @@ const Navbar: React.FC = () => {
                       : "text-slate-500 hover:text-slate-200"
                     }`}
                 >
-                  <span className="text-[10px]">🇮🇩 ID</span>
+                  <span className="text-[10px]">ID</span>
                 </div>
                 <div
                   className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-xs transition-all duration-300 ${language === "en"
@@ -245,7 +264,7 @@ const Navbar: React.FC = () => {
                       : "text-slate-500 hover:text-slate-200"
                     }`}
                 >
-                  <span className="text-[10px]">🇬🇧 EN</span>
+                  <span className="text-[10px]">EN</span>
                 </div>
               </button>
 
@@ -354,8 +373,9 @@ const Navbar: React.FC = () => {
               fann • All rights reserved.
             </p>
           </div>
-        </div>
-      )}
+        </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };

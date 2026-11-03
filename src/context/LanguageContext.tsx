@@ -26,7 +26,7 @@ const translations: Record<Language, Record<string, string>> = {
     "hero.available": "Available for new projects",
     "hero.role": "Frontend & Web Developer",
     "hero.bio":
-      "Passionate Software Developer crafting modern, high-performance web applications with seamless user experiences.",
+      "Frontend Developer building responsive web applications with React, TypeScript, and clean code architecture. Dedicated to high-performance interfaces and pragmatic engineering.",
     "hero.explore": "Explore Projects",
     "hero.contact": "Contact Me",
 
@@ -34,11 +34,11 @@ const translations: Record<Language, Record<string, string>> = {
     "about.badge": "Biography & Focus",
     "about.title": "About Me",
     "about.p1":
-      "Hello! I am Irfan Putra Pratama, a passionate Frontend & Web Developer based in Sekayu, Palembang (South Sumatra). I specialize in designing and engineering modern, accessible, and high-performance digital experiences.",
+      "I'm Irfan Putra Pratama, an undergraduate Informatics Engineering student and Frontend Developer based in Sekayu, South Sumatra. I specialize in crafting clean, accessible, and responsive web applications.",
     "about.p2":
-      "As an active student majoring in Informatics Engineering at Politeknik Sekayu, I continuously bridge academic foundations with modern industry-standard technologies—primarily focusing on the React ecosystem, Next.js, TypeScript, and Tailwind CSS.",
+      "Currently pursuing my degree at Politeknik Sekayu with an outstanding academic record (GPA 3.90/4.00), I focus primarily on modern web ecosystems including React 18, Next.js, TypeScript, and Tailwind CSS.",
     "about.p3":
-      "Beyond frontend aesthetics, I am also well-versed in backend development, API integration, payment gateway implementations, and deploying scalable solutions using Docker on VPS.",
+      "My engineering experience covers both intuitive user interfaces and practical backend services—ranging from RESTful API architecture and relational/document databases (MySQL, MongoDB) to deploying containerized production applications using Docker on Linux VPS.",
     "about.loc_label": "Location",
     "about.loc_val": "Sekayu, Palembang",
     "about.edu_label": "Education",
@@ -140,7 +140,7 @@ const translations: Record<Language, Record<string, string>> = {
     "hero.available": "Terbuka untuk proyek baru",
     "hero.role": "Frontend & Web Developer",
     "hero.bio":
-      "Pengembang Web berdedikasi yang membangun aplikasi web modern berkinerja tinggi dengan pengalaman pengguna yang mulus.",
+      "Frontend Developer yang membangun aplikasi web modern berkinerja tinggi dengan React, TypeScript, dan arsitektur kode yang bersih serta terstruktur.",
     "hero.explore": "Lihat Proyek",
     "hero.contact": "Hubungi Saya",
 
@@ -148,11 +148,11 @@ const translations: Record<Language, Record<string, string>> = {
     "about.badge": "Biografi & Dedikasi",
     "about.title": "Tentang Saya",
     "about.p1":
-      "Halo! Saya Irfan Putra Pratama, seorang Frontend & Web Developer yang berdomisili di Sekayu, Palembang (Sumatera Selatan). Saya berspesialisasi dalam merancang dan mengembangkan pengalaman web digital yang modern, responsif, dan berkinerja tinggi.",
+      "Halo! Saya Irfan Putra Pratama, mahasiswa Teknik Informatika dan Frontend Developer yang berdomisili di Sekayu, Sumatera Selatan. Saya fokus merancang aplikasi web yang cepat, responsif, dan mudah digunakan.",
     "about.p2":
-      "Sebagai mahasiswa aktif jurusan Teknik Informatika di Politeknik Sekayu, saya terus memperdalam teknologi standar industri modern—khususnya ekosistem React, Next.js, TypeScript, dan Tailwind CSS.",
+      "Saat ini aktif menempuh studi di Politeknik Sekayu dengan IPK 3.90/4.00, mendalami teknologi web standar industri—khususnya ekosistem React 18, Next.js, TypeScript, dan Tailwind CSS.",
     "about.p3":
-      "Selain tampilan antarmuka (frontend), saya juga terbiasa dengan backend development, integrasi REST API, implementasi payment gateway, hingga deployment menggunakan Docker di VPS.",
+      "Selain pengembangan antarmuka (frontend), saya juga berpengalaman dalam integrasi RESTful API, perancangan database (MySQL, MongoDB), serta deployment aplikasi menggunakan Docker di lingkungan server Linux VPS.",
     "about.loc_label": "Lokasi",
     "about.loc_val": "Sekayu, Palembang",
     "about.edu_label": "Pendidikan",
