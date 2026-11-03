@@ -116,12 +116,7 @@ export default function Homepage() {
 
       {/* Footer */}
       <footer className="relative z-10 border-t border-slate-200/80 dark:border-slate-800/80 py-6 text-center text-xs text-slate-500 dark:text-slate-400 bg-white/50 dark:bg-slate-950/50 backdrop-blur-sm">
-        <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p>© {new Date().getFullYear()} Irfan Putra Pratama. All Rights Reserved.</p>
-          <p className="font-mono text-[11px] text-slate-400 dark:text-slate-500">
-            Engineered with React & TypeScript
-          </p>
-        </div>
+        <p>© {new Date().getFullYear()} fann • All Rights Reserved</p>
       </footer>
     </div>
   );
