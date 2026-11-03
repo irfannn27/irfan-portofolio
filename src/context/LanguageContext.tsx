@@ -31,7 +31,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // About Section (Human & Authentic Narrative)
     "about.eyebrow": "01 // ABOUT ME",
-    "about.title": "Crafting dependable websites and systems that solve real problems.",
+    "about.title": "Building clean, practical websites and systems that get the job done.",
     "about.p1":
       "Hi, I'm Irfan Putra Pratama — a full-stack web developer based in South Sumatra, Indonesia. I specialize in building fast, practical websites and custom management systems for businesses, institutions, and modern brands.",
     "about.p2":
@@ -41,7 +41,7 @@ const translations: Record<Language, Record<string, string>> = {
     "about.loc_label": "Location",
     "about.loc_val": "Palembang & Sekayu, ID",
     "about.edu_label": "Education",
-    "about.edu_val": "Politeknik Sekayu (IT)",
+    "about.edu_val": "Politeknik Sekayu (D3 TI)",
     "about.status_label": "Availability",
     "about.status_val": "Open for Projects",
     "about.focus_label": "Core Focus",
@@ -70,7 +70,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Education
     "edu.eyebrow": "03 // BACKGROUND",
     "edu.title": "Academic Journey & Fundamentals",
-    "edu.poltek_major": "Informatics Engineering (D4 RPL)",
+    "edu.poltek_major": "D3 Informatics Engineering",
     "edu.poltek_period": "2024 — Present",
     "edu.poltek_status": "Active Student",
     "edu.poltek_gpa": "GPA 3.90 / 4.00",
@@ -152,7 +152,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // About Section (Human & Authentic Narrative)
     "about.eyebrow": "01 // TENTANG SAYA",
-    "about.title": "Membangun website bisnis dan sistem aplikasi yang andal, rapi, dan mudah digunakan.",
+    "about.title": "Fokus membangun website dan sistem aplikasi yang rapi, cepat, dan siap pakai.",
     "about.p1":
       "Halo, saya Irfan Putra Pratama — full-stack web developer asal Palembang/Sekayu. Saya fokus membantu bisnis, instansi pemerintahan, dan pelaku UMKM membangun website yang profesional serta aplikasi sistem manajemen data yang praktis.",
     "about.p2":
@@ -162,7 +162,7 @@ const translations: Record<Language, Record<string, string>> = {
     "about.loc_label": "Lokasi",
     "about.loc_val": "Palembang & Sekayu, ID",
     "about.edu_label": "Pendidikan",
-    "about.edu_val": "Politeknik Sekayu (TI)",
+    "about.edu_val": "Politeknik Sekayu (D3 TI)",
     "about.status_label": "Ketersediaan",
     "about.status_val": "Siap Terima Proyek",
     "about.focus_label": "Fokus Utama",
@@ -191,7 +191,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Education
     "edu.eyebrow": "03 // PENDIDIKAN",
     "edu.title": "Pendidikan & Rekam Jejak Akademik",
-    "edu.poltek_major": "Teknik Informatika (D4 RPL)",
+    "edu.poltek_major": "D3 Teknik Informatika",
     "edu.poltek_period": "2024 — Sekarang",
     "edu.poltek_status": "Mahasiswa Aktif",
     "edu.poltek_gpa": "IPK 3.90 / 4.00",
