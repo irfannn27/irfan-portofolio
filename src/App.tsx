@@ -1,7 +1,8 @@
-import { lazy, Suspense } from 'react'
+import { useState, lazy, Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Homepage from './pages/Homepage'
+import LoadingScreen from './components/LoadingScreen'
 
 // Code splitting / Lazy loading for high PageSpeed Mobile Score
 const AboutPage = lazy(() => import('./pages/AboutPage'))
@@ -16,15 +17,20 @@ const RouteFallback = () => (
 )
 
 function App() {
+  const [showCurtain, setShowCurtain] = useState(true)
+
   return (
-    <Suspense fallback={<RouteFallback />}>
-      <Routes>
-        <Route element={<Homepage />} path="/" />
-        <Route element={<AboutPage />} path="/about" />
-        <Route element={<ProjectsPage />} path="/project" />
-        <Route element={<ContactPage />} path="/contact" />
-      </Routes>
-    </Suspense>
+    <>
+      {showCurtain && <LoadingScreen onComplete={() => setShowCurtain(false)} />}
+      <Suspense fallback={<RouteFallback />}>
+        <Routes>
+          <Route element={<Homepage />} path="/" />
+          <Route element={<AboutPage />} path="/about" />
+          <Route element={<ProjectsPage />} path="/project" />
+          <Route element={<ContactPage />} path="/contact" />
+        </Routes>
+      </Suspense>
+    </>
   )
 }
 

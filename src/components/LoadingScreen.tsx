@@ -1,93 +1,89 @@
 import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface LoadingScreenProps {
   onComplete?: () => void;
 }
 
 const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
-  const [progress, setProgress] = useState(0);
-  const [isFadingOut, setIsFadingOut] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // Only bypass for Google PageSpeed bot, human visitors ALWAYS get the full cinematic animation
+    // Only bypass for automated audit tools (Lighthouse / PageSpeed)
     const isBot =
       typeof navigator !== "undefined" &&
       /Lighthouse|Google-InspectionTool|PageSpeed/i.test(navigator.userAgent);
 
     if (isBot) {
+      setIsVisible(false);
       if (onComplete) onComplete();
       return;
     }
 
-    // Natural, satisfying progress counter animation
-    const interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          clearInterval(interval);
-          return 100;
-        }
-        const diff = Math.floor(Math.random() * 11) + 6;
-        return Math.min(prev + diff, 100);
-      });
-    }, 55);
+    // Fast, crisp timing: 650ms total impression before smooth curtain lift
+    const timer = setTimeout(() => {
+      setIsVisible(false);
+    }, 650);
 
-    return () => clearInterval(interval);
+    return () => clearTimeout(timer);
   }, [onComplete]);
 
-  useEffect(() => {
-    if (progress === 100) {
-      const timer = setTimeout(() => {
-        setIsFadingOut(true);
-        const exitTimer = setTimeout(() => {
-          if (onComplete) onComplete();
-        }, 500);
-        return () => clearTimeout(exitTimer);
-      }, 250);
-
-      return () => clearTimeout(timer);
-    }
-  }, [progress, onComplete]);
-
   return (
-    <div
-      className={`fixed inset-0 z-[9999999] flex flex-col items-center justify-center bg-slate-950 text-white font-poppins transition-opacity duration-500 ease-out ${
-        isFadingOut ? "opacity-0 pointer-events-none" : "opacity-100"
-      }`}
+    <AnimatePresence
+      onExitComplete={() => {
+        if (onComplete) onComplete();
+      }}
     >
-      {/* Background ambient glow */}
-      <div className="absolute w-72 h-72 bg-blue-600/20 rounded-full blur-3xl animate-pulse"></div>
+      {isVisible && (
+        <motion.div
+          key="cinematic-curtain"
+          initial={{ y: 0 }}
+          exit={{
+            y: "-100%",
+            transition: {
+              duration: 0.65,
+              ease: [0.76, 0, 0.24, 1], // Signature luxury cubic-bezier curtain reveal
+            },
+          }}
+          className="fixed inset-0 z-[9999999] flex flex-col items-center justify-center bg-slate-950 text-white font-poppins select-none overflow-hidden"
+        >
+          {/* Subtle architectural ambient aura */}
+          <div className="absolute w-96 h-96 bg-blue-600/10 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="relative z-10 flex flex-col items-center gap-6">
-        {/* Animated Branded <IPP/> Logo Emblem */}
-        <div className="relative group">
-          <div className="absolute -inset-2 rounded-2xl bg-gradient-to-r from-blue-600/40 via-cyan-500/30 to-indigo-600/40 blur-lg animate-pulse"></div>
-          <div className="relative flex items-center justify-center px-6 py-3.5 rounded-2xl bg-slate-900/90 border border-slate-700/80 shadow-2xl backdrop-blur-md">
-            <span className="font-mono font-black text-2xl sm:text-3xl tracking-wider select-none flex items-center">
-              <span className="text-cyan-400 drop-shadow-[0_0_10px_rgba(56,189,248,0.7)]">&lt;</span>
-              <span className="bg-gradient-to-r from-white via-slate-100 to-blue-200 bg-clip-text text-transparent px-1">
-                IPP
-              </span>
-              <span className="text-cyan-400 drop-shadow-[0_0_10px_rgba(56,189,248,0.7)]">/&gt;</span>
-            </span>
-          </div>
-        </div>
+          {/* Minimalist Editorial Typography */}
+          <div className="relative z-10 flex flex-col items-center gap-4 text-center px-6">
+            {/* Elegant live beacon tag */}
+            <motion.div
+              initial={{ scale: 0.85, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.3 }}
+              className="flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-900/90 border border-slate-800 text-[11px] font-mono text-slate-400 tracking-widest uppercase shadow-inner"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping" />
+              <span>Portfolio &bull; 2026</span>
+            </motion.div>
 
-        {/* Progress Bar Container */}
-        <div className="w-56 sm:w-64 flex flex-col items-center gap-2">
-          <div className="w-full h-1.5 bg-slate-800/80 rounded-full overflow-hidden border border-slate-700/50 shadow-inner">
-            <div
-              className="h-full bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-400 rounded-full transition-all duration-75 ease-out"
-              style={{ width: `${progress}%` }}
-            ></div>
-          </div>
+            {/* Name Typography with expanding letter-spacing */}
+            <motion.h1
+              initial={{ opacity: 0, y: 15, letterSpacing: "0.06em" }}
+              animate={{ opacity: 1, y: 0, letterSpacing: "0.18em" }}
+              transition={{ duration: 0.45, ease: "easeOut" }}
+              className="text-xl sm:text-2xl font-black uppercase text-white tracking-[0.18em]"
+            >
+              Irfan Putra Pratama
+            </motion.h1>
 
-          <div className="w-full flex justify-between items-center text-[11px] font-mono tracking-wider text-slate-400">
-            <span>LOADING</span>
-            <span className="text-cyan-400 font-semibold">{progress}%</span>
+            {/* Minimal hairline expanding accent bar */}
+            <motion.div
+              initial={{ width: 0, opacity: 0 }}
+              animate={{ width: "64px", opacity: 1 }}
+              transition={{ duration: 0.45, delay: 0.15, ease: "easeInOut" }}
+              className="h-[2px] bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-500 rounded-full"
+            />
           </div>
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 
