@@ -62,12 +62,6 @@ export default function Skills() {
   return (
     <section className="w-full">
       <div className="mb-6 space-y-1.5">
-        <div className="flex items-center gap-2 mb-2">
-          <span className="font-mono text-xs font-bold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">
-            {t("skills.eyebrow")}
-          </span>
-          <span className="h-px w-8 bg-indigo-500/30" />
-        </div>
 
         <h2 className="font-extrabold text-xl sm:text-3xl text-slate-900 dark:text-white tracking-tight">
           {t("skills.title")}

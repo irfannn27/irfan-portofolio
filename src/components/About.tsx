@@ -58,13 +58,6 @@ const About = () => {
     <section className="w-full flex flex-col gap-10 sm:gap-14">
       {/* 1. Human Story & Editorial Narrative */}
       <div>
-        <div className="flex items-center gap-2 mb-3">
-          <span className="font-mono text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-cyan-400">
-            {t("about.eyebrow")}
-          </span>
-          <span className="h-px w-8 bg-blue-500/30" />
-        </div>
-
         <h1 className="font-extrabold text-2xl sm:text-4xl text-slate-900 dark:text-white tracking-tight leading-snug sm:leading-tight max-w-3xl">
           {t("about.title")}
         </h1>
@@ -100,12 +93,6 @@ const About = () => {
       {/* 3. Client Services & Digital Solutions Bento Grid (Zero AI Slop) */}
       <div>
         <div className="mb-6 space-y-1.5">
-          <div className="flex items-center gap-2 mb-2">
-            <span className="font-mono text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-cyan-400">
-              {t("services.eyebrow")}
-            </span>
-            <span className="h-px w-8 bg-blue-500/30" />
-          </div>
           <h2 className="font-extrabold text-xl sm:text-3xl text-slate-900 dark:text-white tracking-tight">
             {t("services.title")}
           </h2>
