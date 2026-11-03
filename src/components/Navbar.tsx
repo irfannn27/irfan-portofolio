@@ -233,8 +233,7 @@ const Navbar: React.FC = () => {
               <h2 className="text-xl font-extrabold text-slate-900 dark:text-white">
                 Irfan Putra Pratama
               </h2>
-              <span className="font-mono text-xs font-black tracking-wider px-2.5 py-0.5 rounded-full bg-blue-500/10 dark:bg-blue-500/20 text-blue-600 dark:text-cyan-400 border border-blue-500/30">&lt;IPP/&gt;</span>
-            </div>
+              </div>
 
             {/* Handle / Role */}
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">

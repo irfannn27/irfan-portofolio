@@ -107,7 +107,7 @@ export default function Homepage() {
               to="/project"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 font-bold text-sm shadow-md hover:border-blue-500 dark:hover:border-cyan-400 transition-all hover:scale-105 active:scale-95"
             >
-              <span>Jelajahi Semua Proyek & Portfolio</span>
+              <span>{t("projects.explore_all")}</span>
               <HiArrowRight />
             </Link>
           </div>

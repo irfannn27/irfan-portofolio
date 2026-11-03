@@ -85,6 +85,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Projects
     "projects.title": "Featured Projects",
+    "projects.explore_all": "Explore All Projects & Works",
     "projects.subtitle": "A curated showcase of real-world digital solutions, official platforms, and modern web applications.",
     "projects.visit_site": "Visit Website",
     "projects.status_live": "Live",
@@ -199,6 +200,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Projects
     "projects.title": "Proyek Unggulan",
+    "projects.explore_all": "Jelajahi Semua Proyek & Karya",
     "projects.subtitle": "Koleksi proyek nyata, platform resmi, dan aplikasi web modern yang telah saya rancang & kembangkan.",
     "projects.visit_site": "Kunjungi Web",
     "projects.status_live": "Live",
