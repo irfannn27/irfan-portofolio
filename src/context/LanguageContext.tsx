@@ -23,7 +23,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Hero Section
     "hero.available": "Available for new projects",
-    "hero.role": "Frontend & Web Developer",
+    "hero.role": "Frontend Developer",
     "hero.bio":
       "Frontend Developer building responsive web applications with React, TypeScript, and clean code architecture. Dedicated to high-performance interfaces and pragmatic engineering.",
     "hero.explore": "Explore Projects",
@@ -137,7 +137,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Hero Section
     "hero.available": "Terbuka untuk proyek baru",
-    "hero.role": "Frontend & Web Developer",
+    "hero.role": "Frontend Developer",
     "hero.bio":
       "Frontend Developer yang membangun aplikasi web modern berkinerja tinggi dengan React, TypeScript, dan arsitektur kode yang bersih serta terstruktur.",
     "hero.explore": "Lihat Proyek",

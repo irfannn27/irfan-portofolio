@@ -1,37 +1,20 @@
 import { FaInstagram, FaGithub, FaLinkedin, FaUniversity, FaAward } from "react-icons/fa";
 import { HiArrowRight, HiOutlineSparkles, HiCode } from "react-icons/hi";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import gsap from "gsap";
-import { TextPlugin } from "gsap/TextPlugin";
 
 import { useLanguage } from "../context/LanguageContext";
 
-gsap.registerPlugin(TextPlugin);
-
 const HeroSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const textRef = useRef<HTMLDivElement>(null);
-  const { t, language } = useLanguage();
-
-  useEffect(() => {
-    if (textRef.current) {
-      gsap.to(textRef.current, {
-        duration: 1.8,
-        text: {
-          value: t("hero.role"),
-          delimiter: "",
-        },
-      });
-    }
-  }, [language, t]);
+  const { t } = useLanguage();
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 25 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
       className="w-full max-w-6xl mx-auto py-6 sm:py-12 px-4 sm:px-6 lg:px-8"
       ref={containerRef}
     >
@@ -59,11 +42,10 @@ const HeroSection = () => {
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white tracking-tight leading-[1.1]">
               Irfan Putra Pratama
             </h1>
-            <div className="min-h-[38px] flex items-center justify-center lg:justify-start">
-              <span
-                ref={textRef}
-                className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-blue-600 dark:text-cyan-400 tracking-tight"
-              ></span>
+            <div className="flex items-center justify-center lg:justify-start">
+              <span className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-blue-600 dark:text-cyan-400 tracking-tight">
+                {t("hero.role")}
+              </span>
             </div>
           </div>
 

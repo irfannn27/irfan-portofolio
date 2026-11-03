@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
         navbarRef.current,
         {
           opacity: 0,
-          y: -20,
+          y: 0,
         },
         {
           opacity: 1,

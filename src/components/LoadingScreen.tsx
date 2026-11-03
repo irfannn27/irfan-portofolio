@@ -9,6 +9,10 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
+    // Anchor at top and lock scroll during curtain
+    window.scrollTo(0, 0);
+    document.body.style.overflow = "hidden";
+    const unlock = () => { document.body.style.overflow = ""; };
     // Only bypass for automated audit tools (Lighthouse / PageSpeed)
     const isBot =
       typeof navigator !== "undefined" &&
@@ -25,7 +29,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
       setIsVisible(false);
     }, 650);
 
-    return () => clearTimeout(timer);
+    return () => { clearTimeout(timer); unlock(); };
   }, [onComplete]);
 
   return (
