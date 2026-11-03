@@ -30,8 +30,8 @@ const translations: Record<Language, Record<string, string>> = {
     "hero.contact": "Contact Me",
 
     // About Section (Human & Authentic Narrative)
-    "about.eyebrow": "01 // ABOUT ME",
-    "about.title": "Building clean, practical websites and systems that get the job done.",
+    "about.eyebrow": "01 // PROFILE",
+    "about.title": "About Me",
     "about.p1":
       "Hi, I'm Irfan Putra Pratama — a full-stack web developer based in South Sumatra, Indonesia. I specialize in building fast, practical websites and custom management systems for businesses, institutions, and modern brands.",
     "about.p2":
@@ -151,8 +151,8 @@ const translations: Record<Language, Record<string, string>> = {
     "hero.contact": "Hubungi Saya",
 
     // About Section (Human & Authentic Narrative)
-    "about.eyebrow": "01 // TENTANG SAYA",
-    "about.title": "Fokus membangun website dan sistem aplikasi yang rapi, cepat, dan siap pakai.",
+    "about.eyebrow": "01 // PROFIL",
+    "about.title": "Tentang Saya",
     "about.p1":
       "Halo, saya Irfan Putra Pratama — full-stack web developer asal Palembang/Sekayu. Saya fokus membantu bisnis, instansi pemerintahan, dan pelaku UMKM membangun website yang profesional serta aplikasi sistem manajemen data yang praktis.",
     "about.p2":
