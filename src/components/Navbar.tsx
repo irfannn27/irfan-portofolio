@@ -74,7 +74,7 @@ const Navbar: React.FC = () => {
         className="hidden md:flex fixed top-0 left-0 right-0 z-[99999] justify-center pointer-events-none font-poppins"
         ref={navbarRef}
       >
-        <nav className="pointer-events-auto mt-5 px-4 py-2.5 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md text-slate-800 dark:text-white flex justify-between items-center shadow-2xl w-[92%] max-w-[480px] rounded-full border border-slate-200 dark:border-slate-700/80 transition-all duration-300">
+        <nav className="pointer-events-auto mt-4 px-3 py-1.5 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl text-slate-800 dark:text-white flex items-center gap-2.5 sm:gap-3 shadow-xl shadow-slate-900/5 dark:shadow-black/40 w-fit rounded-full border border-slate-200/90 dark:border-white/[0.08] transition-all duration-300">
           <div className="flex gap-1 list-none font-medium text-sm items-center relative">
             {navItems.map((item) => {
               const active = isActive(item.path);
@@ -100,6 +100,9 @@ const Navbar: React.FC = () => {
               );
             })}
           </div>
+
+          {/* Minimalist Divider */}
+          <div className="h-4 w-px bg-slate-200 dark:bg-slate-700/80" />
 
           <div className="flex items-center gap-1.5">
             {/* Language Switcher Pill */}

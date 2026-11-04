@@ -13,7 +13,7 @@
     @apply w-full flex flex-col text-slate-800 dark:text-white font-poppins gap-4 transition-colors duration-300;
   }
   .section-2 {
-    @apply px-4 sm:px-8 md:px-16 lg:px-28 xl:px-44 pt-24 sm:pt-28 md:pt-36;
+    @apply px-4 sm:px-8 md:px-16 lg:px-28 xl:px-44 pt-20 sm:pt-24 md:pt-28;
   }
   .input-form {
     @apply shadow-sm text-sm rounded-lg block w-full p-3 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 placeholder-slate-400 dark:placeholder-slate-500 text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors duration-200;

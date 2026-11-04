@@ -145,7 +145,7 @@ const Projects = () => {
       : projects.filter((item) => item.category === activeTab);
 
   return (
-    <div className="section section-2 pt-24 sm:pt-28 md:pt-36 pb-20">
+    <div className="section section-2 pb-20">
       {/* Header with pill badge */}
       <div className="mb-8 space-y-2">
         <motion.div
