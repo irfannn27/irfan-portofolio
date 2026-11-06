@@ -116,20 +116,35 @@ const translations: Record<Language, Record<string, string>> = {
     "projects.recipes_desc":
       "FannsRecipes is an interactive cooking companion application providing over 1,000+ step-by-step recipes, categorized cooking guides, and instant recipe search for home chefs.",
 
-    // Contact
-    "contact.title": "Let's Connect",
+    // Contact (Bespoke & Direct Channels)
+    "contact.title": "Get in Touch",
     "contact.subtitle":
-      "Have a project in mind, an exciting job opportunity, or just want to say hi? Feel free to send a message!",
+      "Have an upcoming project, need a business website, or want to build a custom application system? Reach out directly — I'm open for client projects and consultations.",
+    "contact.direct_heading": "Direct Channels",
+    "contact.wa_label": "WhatsApp & Call",
+    "contact.wa_sub": "Fastest response for project inquiries",
+    "contact.wa_btn": "Chat on WhatsApp",
+    "contact.email_label": "Direct Email",
+    "contact.email_sub": "For RFPs, specs, or formal inquiries",
+    "contact.copy_email": "Copy Email",
+    "contact.copied": "Copied!",
+    "contact.location_label": "Location",
+    "contact.location_val": "Sekayu & Palembang, South Sumatra, ID",
+    "contact.availability_label": "Availability",
+    "contact.availability_val": "Open for Freelance & Client Projects",
+    "contact.form_heading": "Send a Direct Message",
+    "contact.form_sub": "Prefer leaving a note here? Fill out the form below.",
     "contact.name": "Your Name",
     "contact.email": "Your Email",
     "contact.message": "Your Message",
     "contact.placeholder_name": "e.g. John Doe",
-    "contact.placeholder_email": "name@example.com",
-    "contact.placeholder_msg": "Tell me about your project, idea, or questions...",
+    "contact.placeholder_email": "name@company.com",
+    "contact.placeholder_msg": "Tell me about your project, timeline, or requirements...",
     "contact.send": "Send Message",
     "contact.sending": "Sending...",
-    "contact.success_title": "Message Sent!",
-    "contact.success_desc": "Thank you for reaching out! I will get back to you as soon as possible.",
+    "contact.success_title": "Message Received!",
+    "contact.success_desc": "Thank you for reaching out! I will review your message and reply promptly.",
+    "contact.send_another": "Send Another Message",
   },
   id: {
     // Nav items
@@ -237,20 +252,35 @@ const translations: Record<Language, Record<string, string>> = {
     "projects.recipes_desc":
       "FannsRecipes adalah aplikasi resep masakan interaktif yang menyediakan lebih dari 1.000+ panduan memasak langkah-demi-langkah dan pencarian resep instan.",
 
-    // Contact
-    "contact.title": "Hubungi Saya",
+    // Contact (Bespoke & Direct Channels)
+    "contact.title": "Kontak & Diskusi Proyek",
     "contact.subtitle":
-      "Punya ide proyek, tawaran kerja sama menarik, atau sekadar ingin menyapa? Jangan ragu untuk mengirim pesan!",
+      "Punya rencana proyek, butuh website bisnis, atau ingin membuat sistem aplikasi? Mari diskusi langsung — saya siap bantu dari tahap perencanaan hingga online.",
+    "contact.direct_heading": "Saluran Langsung",
+    "contact.wa_label": "WhatsApp & Telepon",
+    "contact.wa_sub": "Respon paling cepat untuk diskusi & tanya-tanya",
+    "contact.wa_btn": "Chat di WhatsApp",
+    "contact.email_label": "Email Resmi",
+    "contact.email_sub": "Untuk penawaran kerja sama, proposal, atau berkas",
+    "contact.copy_email": "Salin Email",
+    "contact.copied": "Tersalin!",
+    "contact.location_label": "Domisili",
+    "contact.location_val": "Sekayu & Palembang, Sumatera Selatan",
+    "contact.availability_label": "Status",
+    "contact.availability_val": "Siap Terima Proyek Freelance & Klien",
+    "contact.form_heading": "Kirim Pesan Lewat Web",
+    "contact.form_sub": "Lebih suka kirim pesan langsung di sini? Isi formulir di bawah.",
     "contact.name": "Nama Anda",
     "contact.email": "Email Anda",
     "contact.message": "Pesan Anda",
     "contact.placeholder_name": "contoh: Noemi",
     "contact.placeholder_email": "nama@email.com",
-    "contact.placeholder_msg": "Ceritakan tentang proyek, ide, atau pertanyaan Anda...",
+    "contact.placeholder_msg": "Ceritakan tentang rencana website, sistem, atau kebutuhan Anda...",
     "contact.send": "Kirim Pesan",
     "contact.sending": "Mengirim...",
     "contact.success_title": "Pesan Terkirim!",
     "contact.success_desc": "Terima kasih sudah menghubungi! Saya akan segera membalas pesan Anda.",
+    "contact.send_another": "Kirim Pesan Lain",
   },
 };
 
